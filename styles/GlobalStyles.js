@@ -64,7 +64,7 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         background-color: ${(props) => props.theme.colorBlack};
-        width: 100vw;
+        max-width: 100vw;
         min-height: 100vh;
         overflow: hidden;
     }
