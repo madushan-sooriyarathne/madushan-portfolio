@@ -1,5 +1,12 @@
+import HeroBanner from "../components/layout/hero-banner/HeroBanner";
+import Page from "../components/layout/page/Page";
+
 const Home = () => {
-  return <div>Hello World</div>;
+  return (
+    <Page>
+      <HeroBanner />
+    </Page>
+  );
 };
 
 export default Home;
