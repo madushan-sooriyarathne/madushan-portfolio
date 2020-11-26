@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
+import NavBar from "../nav-bar/NavBar";
 import PageWrapper from "./PageStyles";
 
 const Page = ({
@@ -13,7 +14,7 @@ const Page = ({
         <title>{title}</title>
       </Head>
       <Header />
-      {/* Nav Bar Here */}
+      <NavBar />
       {children}
       <Footer />
     </PageWrapper>
