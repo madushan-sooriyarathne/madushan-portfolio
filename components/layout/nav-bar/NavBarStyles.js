@@ -33,7 +33,6 @@ const NavBarLink = styled.a`
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
-  padding-top: 2px;
   cursor: pointer;
 
   position: relative;
