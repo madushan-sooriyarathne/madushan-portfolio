@@ -2,7 +2,8 @@ const theme = {
   colorBlack: "#000",
   colorWhite: "#fff",
   navBarFoldedWidth: "10rem",
-  fontSecondary: "'Almondita Regular', sans-serif",
+  fontPrimary: "'Avenir Next', sans-serif",
+  fontSecondary: "'Almondita Regular','Times New Roman', Times, serif",
 };
 
 export default theme;
