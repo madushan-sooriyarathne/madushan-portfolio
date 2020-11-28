@@ -1,5 +1,5 @@
 import HeadingPrimary from "../../headings/heading-primary/HeadingPrimary";
-import HeadingSecondary from "../../headings/heading-secondary/HeadingSecondary";
+import HeadingSub from "../../headings/heading-sub/HeadingSub";
 import {
   HeroSection,
   TextWrapper,
@@ -26,10 +26,8 @@ const HeroBanner = () => {
         <CTAWrapper>
           <HeadingPrimary>Hello! I'm</HeadingPrimary>
           <CTAHeading>Madushan</CTAHeading>
-          <HeadingSecondary>
-            Creative Designer & Full Stack Web Developer
-          </HeadingSecondary>
-          <HeadingSecondary>from Colombo, Sri Lanka.</HeadingSecondary>
+          <HeadingSub>Creative Designer & Full Stack Web Developer</HeadingSub>
+          <HeadingSub>from Colombo, Sri Lanka.</HeadingSub>
           <SocialMediasWrapper>
             <SocialMediaHeading>Find me on</SocialMediaHeading>
             <SocialIconGroup>

@@ -1,6 +1,6 @@
 import TitleGroup from "../title-group/TitleGroup";
 import HeadingPrimary from "../../headings/heading-primary/HeadingPrimary";
-import HeadingSecondary from "../../headings/heading-secondary/HeadingSecondary";
+import HeadingSub from "../../headings/heading-sub/HeadingSub";
 
 import {
   Section,
@@ -19,7 +19,7 @@ const AboutSection = () => {
       <TextWrapper>
         <TitleGroup>
           <HeadingPrimary>About me</HeadingPrimary>
-          <HeadingSecondary>Hi! I am Madushan [ma-dhu-shaa-n]</HeadingSecondary>
+          <HeadingSub>Hi! I am Madushan [ma-dhu-shaa-n]</HeadingSub>
         </TitleGroup>
         <Description>
           I’m a Creative Designer & Full Stack Web Developer and I design and
