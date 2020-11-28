@@ -4,7 +4,7 @@
   "plugins": [
     [
       "styled-components",
-      { "ssr": true, "displayName": true, "preprocessor": false }
+      { "ssr": true, "displayName": false, "preprocessor": false }
     ]
   ]
 }
