@@ -6,7 +6,10 @@ import {
   Section,
   TextWrapper,
   Description,
-  ImageWrapper,
+  QuoteWrapper,
+  QuoteGroup,
+  Quote,
+  QuoteAuthor,
 } from "./AboutSectionStyles";
 import StyledLink from "../../styled-link/StyledLink";
 
@@ -39,7 +42,15 @@ const AboutSection = () => {
           buddies.
         </Description>
       </TextWrapper>
-      <ImageWrapper />
+      <QuoteWrapper>
+        <QuoteGroup>
+          <Quote>
+            Choose a job you love and you will never have to work a day in your
+            life.
+          </Quote>
+          <QuoteAuthor>- Confucius -</QuoteAuthor>
+        </QuoteGroup>
+      </QuoteWrapper>
     </Section>
   );
 };

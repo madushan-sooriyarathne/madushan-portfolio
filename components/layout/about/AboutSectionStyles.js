@@ -8,7 +8,7 @@ const Section = styled.section`
     2,
     [col-start] minmax(min-content, 1fr) [col-end]
   );
-  grid-template-areas: "ab im";
+  grid-template-areas: "ab qo";
   gap: 5rem;
   padding: ${(props) =>
     `${props.theme.headerHeight} 0 ${props.theme.footerHeight} 0`};
@@ -33,13 +33,58 @@ const Description = styled.div`
   margin-top: 5rem;
 `;
 
-const ImageWrapper = styled.div`
-  grid-area: im;
-  width: 100%;
-  height: 100%;
-  background-image: url("/static/img/about-cover.jpg");
-  background-size: cover;
-  background-position: center center;
+const QuoteWrapper = styled.div`
+  grid-area: qo;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
 `;
 
-export { Section, TextWrapper, Description, ImageWrapper };
+const QuoteGroup = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4rem;
+    left: -1.4rem;
+    width: 50%;
+    height: 60%;
+    background-image: url("/static/img/quote.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.5;
+  }
+
+  & > *:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+`;
+
+const Quote = styled.p`
+  font-size: 5rem;
+  font-weight: 700;
+`;
+
+const QuoteAuthor = styled.p`
+  font-size: 2rem;
+  font-weight: 400;
+`;
+
+export {
+  Section,
+  TextWrapper,
+  Description,
+  QuoteWrapper,
+  QuoteGroup,
+  Quote,
+  QuoteAuthor,
+};
