@@ -1,4 +1,4 @@
-import { Heading } from "./HeadingSecondaryStyles";
+import { Heading } from "./HeadingSubStyles";
 
 const HeadingSub = ({ children }) => {
   return <Heading>{children}</Heading>;
