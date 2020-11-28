@@ -30,7 +30,42 @@ const Description = styled.div`
   font-weight: 400;
   letter-spacing: 1px;
 
-  margin-top: 5rem;
+  margin: 5rem 0 8rem 0;
+`;
+
+const QuickLinksWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
+
+const QuickLinksGroup = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  margin-top: 2rem;
+
+  & > *:not(:last-child) {
+    margin-right: 2rem;
+  }
+`;
+
+const QuickLink = styled.a`
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+
+  margin-bottom: 1rem;
+
+  transition: transform 0.2s ease-out;
+
+  &:hover {
+    transform: translateX(2px);
+  }
 `;
 
 const QuoteWrapper = styled.div`
@@ -83,6 +118,9 @@ export {
   Section,
   TextWrapper,
   Description,
+  QuickLinksWrapper,
+  QuickLinksGroup,
+  QuickLink,
   QuoteWrapper,
   QuoteGroup,
   Quote,

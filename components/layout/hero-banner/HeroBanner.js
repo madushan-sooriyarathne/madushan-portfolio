@@ -12,14 +12,9 @@ import {
   ImageWrapper,
 } from "./HeroBannerStyles";
 
-const HeroBanner = () => {
-  const socialLinks = [
-    { name: "linkedin", url: "", id: 0 },
-    { name: "github", url: "", id: 1 },
-    { name: "instagram", url: "", id: 2 },
-    { name: "facebook", url: "", id: 3 },
-  ];
+import { socialLinks } from "../../../data/data";
 
+const HeroBanner = () => {
   return (
     <HeroSection>
       <TextWrapper>

@@ -1,11 +1,17 @@
 import TitleGroup from "../title-group/TitleGroup";
 import HeadingPrimary from "../../headings/heading-primary/HeadingPrimary";
 import HeadingSub from "../../headings/heading-sub/HeadingSub";
+import HeadingSecondary from "../../headings/heading-secondary/HeadingSecondary";
+
+import { quickLinks } from "../../../data/data";
 
 import {
   Section,
   TextWrapper,
   Description,
+  QuickLinksWrapper,
+  QuickLinksGroup,
+  QuickLink,
   QuoteWrapper,
   QuoteGroup,
   Quote,
@@ -41,6 +47,21 @@ const AboutSection = () => {
           by learning new stuff. If not I’m probably playing a game with my
           buddies.
         </Description>
+        <QuickLinksWrapper>
+          <HeadingSecondary>Quick Links</HeadingSecondary>
+          <QuickLinksGroup>
+            {quickLinks.map((link) => (
+              <QuickLink
+                href={link.url}
+                key={link.id}
+                target="_blank"
+                rel="noopener"
+              >
+                {link.name}
+              </QuickLink>
+            ))}
+          </QuickLinksGroup>
+        </QuickLinksWrapper>
       </TextWrapper>
       <QuoteWrapper>
         <QuoteGroup>
