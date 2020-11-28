@@ -1,4 +1,5 @@
 import Head from "next/head";
+import PageOverlay from "../page-overlay/PageOverlay";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
 import NavBar from "../nav-bar/NavBar";
@@ -10,6 +11,7 @@ const Page = ({
 }) => {
   return (
     <PageWrapper>
+      <PageOverlay />
       <Head>
         <title>{title}</title>
       </Head>
