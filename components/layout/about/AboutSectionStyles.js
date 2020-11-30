@@ -10,9 +10,8 @@ const Section = styled.section`
   );
   grid-template-areas: "ab qo";
   gap: 5rem;
-  padding: ${(props) =>
-    `${props.theme.headerHeight} 0 ${props.theme.footerHeight} 0`};
-  height: 100vh;
+  padding: ${(props) => `${props.theme.headerHeight} 0 0 0`};
+  min-height: ${(props) => `calc(100vh - ${props.theme.footerHeight})`};
 `;
 
 const TextWrapper = styled.div`
