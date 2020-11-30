@@ -32,7 +32,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>{this.props.styleTags}</Head>
-        <body>
+        <body style={{ visibility: "hidden" }}>
           <Main />
           <NextScript />
         </body>
