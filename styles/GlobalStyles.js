@@ -68,6 +68,25 @@ const GlobalStyles = createGlobalStyle`
         min-height: 100vh;
     }
 
+    ::-webkit-scrollbar {
+      width: 0.8rem;
+    }
+
+    ::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: ${(props) => props.theme.colorBlackLight};
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: ${(props) => props.theme.colorGray};
+      border-radius: 10px;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover {
+        background-color: ${(props) => props.theme.colorGrayLight};
+      }
+    }
+
 
 `;
 
