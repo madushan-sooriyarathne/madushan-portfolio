@@ -1,9 +1,7 @@
 import styled from "styled-components";
 
 const FooterWrapper = styled.footer`
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  grid-column: full-start / full-end;
 
   width: 100%;
   height: auto;
