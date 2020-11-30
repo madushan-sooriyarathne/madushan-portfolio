@@ -3,7 +3,7 @@ import styled from "styled-components";
 const HeroSection = styled.section`
   grid-column: full-start / full-end;
   width: 100%;
-  height: 100vh;
+  height: ${(props) => `calc(100vh - ${props.theme.footerHeight})`};
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
