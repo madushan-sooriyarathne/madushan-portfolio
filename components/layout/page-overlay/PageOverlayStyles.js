@@ -1,29 +1,29 @@
 import styled, { keyframes } from "styled-components";
+import { animated } from "react-spring";
 
-const Fade = keyframes`
+const animate = keyframes`
     from {
         opacity: 1;
         visibility: visible;
     }
+
     to {
-        opacity: 0;
-        visibility: hidden;
+       opacity: 0;
+       visibility: hidden;
     }
 `;
 
-const Overlay = styled.div`
+const Overlay = styled(animated.div)`
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0%;
+  left: 0%;
   width: 100vw;
   height: 100vh;
-  background-color: ${(props) => props.theme.colorBlack};
-  z-index: 10;
-
   opacity: 1;
-  visibility: visible;
+  z-index: 25;
+  background-color: ${(props) => props.theme.colorBlack};
 
-  animation: ${Fade} ease-in-out forwards 0.5s;
+  animation: ${animate} 0.3s forwards;
 `;
 
 export { Overlay };
