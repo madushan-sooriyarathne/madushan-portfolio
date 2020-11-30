@@ -29,4 +29,12 @@ const quickLinks = [
   { name: "Advertaro Creative Agency", url: "https://advertaro.lk/", id: 4 },
 ];
 
-export { socialLinks, quickLinks };
+const navBarLinks = [
+  { name: "Home", route: "/", id: 0 },
+  { name: "About", route: "/about", id: 1 },
+  { name: "Tech Stack", route: "/tech-stack", id: 2 },
+  { name: "Work", route: "/work", id: 3 },
+  { name: "Contact", route: "/contact", id: 4 },
+];
+
+export { socialLinks, quickLinks, navBarLinks };
