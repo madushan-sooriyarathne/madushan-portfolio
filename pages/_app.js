@@ -1,8 +1,10 @@
+import { useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 
 import theme from "../styles/theme";
 import GlobalStyles from "../styles/GlobalStyles";
-import { useEffect } from "react";
+
+import "../styles/fonts.css";
 
 const MainApp = ({ Component, pageProps }) => {
   useEffect(() => {
