@@ -2,7 +2,7 @@ import Head from "next/head";
 import PageOverlay from "../page-overlay/PageOverlay";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
-import PageWrapper from "./PageStyles";
+import { PageWrapper, ContentWrapper } from "./PageStyles";
 
 const Page = ({
   children,
@@ -15,7 +15,7 @@ const Page = ({
         <title>{title}</title>
       </Head>
       <Header />
-      {children}
+      <ContentWrapper>{children}</ContentWrapper>
       <Footer />
     </PageWrapper>
   );
