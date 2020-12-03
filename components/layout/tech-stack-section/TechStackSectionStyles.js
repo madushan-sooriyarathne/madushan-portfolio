@@ -63,6 +63,17 @@ const ItemsWrapper = styled.div`
   height: 100%;
 `;
 
+const TechItemName = styled.p`
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-weight: 600;
+  color: inherit;
+  letter-spacing: 1px;
+  line-height: 1;
+
+  transition: color 0.2s ease-in;
+`;
+
 const TechItem = styled.div`
   display: grid;
   grid-template-columns: min-content minmax(min-content, 1fr);
@@ -90,17 +101,6 @@ const TechItemLogo = styled.img`
   width: 4rem;
   height: 4rem;
   padding: 0.5rem;
-`;
-
-const TechItemName = styled.p`
-  font-size: 1.5rem;
-  padding: 1rem;
-  font-weight: 600;
-  color: inherit;
-  letter-spacing: 1px;
-  line-height: 1;
-
-  transition: color 0.2s ease-in;
 `;
 
 export {
