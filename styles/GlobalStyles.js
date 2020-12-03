@@ -13,7 +13,7 @@ const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
         font-size: 62.5%; 
         font-weight: 400;
-        font-family: 'Avenir Next', sans-serif;
+        font-family: ${(props) => props.theme.fontPrimary};
         letter-spacing: 0.5px;
         color: ${(props) => props.theme.colorWhite};
     }
