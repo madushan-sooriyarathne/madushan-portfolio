@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { CustomButton, Arrow, ButtonText } from "./ButtonStyles";
 
 const Button = ({
@@ -6,12 +7,24 @@ const Button = ({
   type = "button",
   disabled = false,
   isBig = false,
+  route = null,
 }) => {
   return (
-    <CustomButton type={type} onClick={onClick} disabled={disabled}>
-      <ButtonText isBig={isBig}>{children}</ButtonText>
-      <Arrow />
-    </CustomButton>
+    <>
+      {route ? (
+        <Link href={route}>
+          <CustomButton>
+            <ButtonText isBig={isBig}>{children}</ButtonText>
+            <Arrow />
+          </CustomButton>
+        </Link>
+      ) : (
+        <CustomButton type={type} onClick={onClick} disabled={disabled}>
+          <ButtonText isBig={isBig}>{children}</ButtonText>
+          <Arrow />
+        </CustomButton>
+      )}
+    </>
   );
 };
 
