@@ -24,7 +24,6 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const navBarProps = useSpring({
     transform: open ? `translateX(0)` : `translateX(-100%)`,
-    duration: 500,
   });
 
   const trail = useTrail(navBarLinks.length, {
