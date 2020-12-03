@@ -3,9 +3,7 @@ import { animated } from "react-spring";
 
 const Wrapper = styled.div`
   grid-column: content-start / content-end;
-  min-height: ${(props) => `calc(100vh - ${props.theme.footerHeight})`};
-  padding: 10rem;
-  padding-top: ${(props) => `calc(${props.theme.headerHeight} + 5rem)`};
+  min-height: 100%;
 
   display: flex;
   flex-direction: column;

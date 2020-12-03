@@ -10,8 +10,7 @@ const Section = styled.section`
   );
   grid-template-areas: "ab qo";
   gap: 5rem;
-  padding: ${(props) => `${props.theme.headerHeight} 0 0 0`};
-  min-height: ${(props) => `calc(100vh - ${props.theme.footerHeight})`};
+  min-height: 100%;
 `;
 
 const TextWrapper = styled.div`
@@ -21,7 +20,7 @@ const TextWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 5rem;
+  padding: 2rem 5rem;
 `;
 
 const Description = styled.div`

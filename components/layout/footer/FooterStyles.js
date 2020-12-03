@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 const FooterWrapper = styled.footer`
-  grid-column: full-start / full-end;
-
   width: 100%;
   height: auto;
 

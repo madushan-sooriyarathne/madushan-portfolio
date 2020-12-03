@@ -57,7 +57,7 @@ const techStack = [
 const TechStackSection = () => {
   return (
     <Section>
-      <TitleGroup>
+      <TitleGroup centered={true}>
         <HeadingPrimary>What I use</HeadingPrimary>
         <HeadingSub>
           This is my current go-to stack. This can change time to time.

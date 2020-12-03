@@ -3,7 +3,7 @@ import styled from "styled-components";
 const HeroSection = styled.section`
   grid-column: full-start / full-end;
   width: 100%;
-  height: ${(props) => `calc(100vh - ${props.theme.footerHeight})`};
+  height: 100%;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -20,7 +20,7 @@ const TextWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-left: ${(props) => `calc(${props.theme.navBarFoldedWidth} + 5rem)`};
+  padding-left: 20rem;
 `;
 
 const CTAWrapper = styled.div`

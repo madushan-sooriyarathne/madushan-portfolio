@@ -8,9 +8,8 @@ const Section = styled.section`
   gap: 5rem;
   align-items: center;
   justify-items: center;
-  padding: 10rem;
-  padding-top: ${(props) => `calc(${props.theme.headerHeight} + 5rem)`};
-  min-height: ${(props) => `calc(100vh - ${props.theme.footerHeight}) `};
+  padding: 3rem 10rem;
+  min-height: 100%;
 `;
 
 const ContentWrapper = styled.div`
