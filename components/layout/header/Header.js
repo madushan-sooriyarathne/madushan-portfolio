@@ -35,12 +35,9 @@ const Header = () => {
     delay: 500,
   });
 
-  const handleMenuOpen = (event) => {
+  const handleMenuToggle = (event) => {
+    if (open) window.scroll(0, 0);
     setOpen((prvState) => !prvState);
-  };
-
-  const handleMenuClose = (event) => {
-    setOpen(false);
   };
 
   const handleRouteChange = (route) => {
@@ -52,11 +49,11 @@ const Header = () => {
 
   return (
     <>
-      <HeaderWrapper>
+      <HeaderWrapper menuOpened={open}>
         <Link href="/">
           <Logo>Madushan Sooriyarathne</Logo>
         </Link>
-        <MenuButton onClick={handleMenuOpen}>
+        <MenuButton onClick={handleMenuToggle}>
           <SVGWrapper width="50" height="50" viewBox="0 0 100 100">
             <LineOne
               open={open}

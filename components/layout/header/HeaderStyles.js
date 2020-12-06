@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { animated } from "react-spring";
 
 const HeaderWrapper = styled.header`
-  position: absolute;
+  position: ${(props) => (props.menuOpened ? "fixed" : "absolute")};
   top: 0;
   left: 0;
 
