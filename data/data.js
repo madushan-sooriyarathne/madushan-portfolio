@@ -37,42 +37,4 @@ const navBarLinks = [
   { name: "Contact", route: "/contact", id: 4 },
 ];
 
-const workItems = [
-  {
-    name: "Madushan Portfolio",
-    type: "Web Design & Development",
-    status: "In Development",
-    image: "/static/img/madushan-portfolio.png",
-    id: 0,
-  },
-  {
-    name: "Advertaro",
-    type: "Web Design & Development",
-    status: "Finished",
-    image: "/static/img/advertaro.png",
-    id: 0,
-  },
-  {
-    name: "Winter Fashion",
-    type: "Web Design & Development",
-    status: "In Development",
-    image: "/static/img/winter-fashion.png",
-    id: 0,
-  },
-  {
-    name: "Color Palette App",
-    type: "Web Design & Development",
-    status: "Finished",
-    image: "/static/img/color-palette-app.png",
-    id: 0,
-  },
-  {
-    name: "World Weather",
-    type: "Web Design & Development",
-    status: "Finished",
-    image: "/static/img/world-weather.png",
-    id: 0,
-  },
-];
-
-export { socialLinks, quickLinks, navBarLinks, workItems };
+export { socialLinks, quickLinks, navBarLinks };
