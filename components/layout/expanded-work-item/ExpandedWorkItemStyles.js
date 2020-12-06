@@ -39,6 +39,11 @@ const WorkType = styled.p`
 const TechStackGroup = styled.div`
   grid-column: 2 / 3;
   grid-row: 1 / 3;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 `;
 
 const StatusBadge = styled.p`

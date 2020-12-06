@@ -2,6 +2,7 @@ import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 import HeadingPrimary from "../../headings/heading-primary/HeadingPrimary";
 import Button from "../../button/Button";
+import TechStackItem from "../../tech-stack-item/TechStackItem";
 
 import {
   Wrapper,
@@ -33,7 +34,11 @@ const ExpandedWorkItem = ({ workItem }) => {
           <HeadingPrimary>{workItem.name}</HeadingPrimary>
           <WorkType>{workItem.type}</WorkType>
         </TitleWrapper>
-        <TechStackGroup></TechStackGroup>
+        <TechStackGroup>
+          {workItem.stack.map((item) => (
+            <TechStackItem key={item.stackItemId} item={item} />
+          ))}
+        </TechStackGroup>
         <StatusBadge status={workItem.status.toLowerCase().replace(" ", "-")}>
           {workItem.status}
         </StatusBadge>
