@@ -8,10 +8,13 @@ import {
   StatusBadge,
 } from "./WorkItemStyles";
 
-const WorkItem = ({ workItem }) => {
-  console.log(workItem);
+const WorkItem = ({ workItem, onClick }) => {
   return (
-    <ItemWrapper>
+    <ItemWrapper
+      onClick={() => {
+        onClick(workItem.workId);
+      }}
+    >
       <Image src={workItem.image} />
       <DetailsWrapper>
         <TitleWrapper>
