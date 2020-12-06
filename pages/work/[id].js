@@ -33,7 +33,7 @@ const getStaticProps = async ({ params }) => {
         url: workItem.url,
         stack: techStack,
         workId: workItem.workId,
-        description: workItem.description,
+        description: workItem.description ? workItem.description : null,
       },
     },
   };
