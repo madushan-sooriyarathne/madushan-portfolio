@@ -12,9 +12,12 @@
   "author": "Madushan Sooriyarathne",
   "license": "ISC",
   "dependencies": {
+    "@contentful/rich-text-html-renderer": "^14.1.2",
+    "contentful": "^8.0.3",
     "next": "^10.0.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-flip-toolkit": "^7.0.13",
     "react-spring": "^8.0.27",
     "styled-components": "^5.2.1"
   },
