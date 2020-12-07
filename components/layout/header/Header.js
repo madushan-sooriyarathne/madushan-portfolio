@@ -18,6 +18,7 @@ import {
   NavLinkWrapper,
   NavBarItem,
 } from "./HeaderStyles";
+import { route } from "next/dist/next-server/server/router";
 
 const Header = () => {
   const router = useRouter();
@@ -46,6 +47,8 @@ const Header = () => {
     }, 500);
     setOpen(false);
   };
+
+  const isSelected = (route) => router.pathname === route;
 
   return (
     <>
@@ -79,6 +82,7 @@ const Header = () => {
                 ...rest,
                 transform: x.interpolate((x) => `translate3d(0, ${x}px, 0)`),
               }}
+              selected={isSelected(navBarLinks[index].route)}
             >
               <NavBarItem styled={{ height }}>
                 {navBarLinks[index].name}

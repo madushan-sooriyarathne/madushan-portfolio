@@ -88,6 +88,8 @@ const NavButtonGroup = styled.div`
 
 const NavLinkWrapper = styled(animated.div)`
   padding: 2rem;
+  background-color: ${(props) =>
+    props.selected ? "rgba(255, 255, 255, 0.1)" : "transparent"};
 `;
 
 const NavBarItem = styled(animated.a)`
