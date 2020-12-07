@@ -7,6 +7,7 @@ const Wrapper = styled.div`
 
 const Image = styled.img`
   width: 100%;
+  margin-bottom: 3rem;
 `;
 
 const DetailsWrapper = styled.div`
@@ -39,6 +40,8 @@ const WorkType = styled.p`
 const TechStackGroup = styled.div`
   grid-column: 2 / 3;
   grid-row: 1 / 3;
+
+  justify-self: end;
 
   display: flex;
   align-items: flex-start;
