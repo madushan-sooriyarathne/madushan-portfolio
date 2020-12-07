@@ -3,13 +3,25 @@ const socialLinks = [
     name: "linkedin",
     url: "https://www.linkedin.com/in/madushan-sooriyarathne/",
     id: 0,
+    userName: "madushan-sooriyarathne",
   },
-  { name: "github", url: "https://github.com/madushan-sooriyarathne", id: 1 },
-  { name: "instagram", url: "https://www.instagram.com/iam_madushan/", id: 2 },
+  {
+    name: "github",
+    url: "https://github.com/madushan-sooriyarathne",
+    id: 1,
+    userName: "madushan-sooriyarathne",
+  },
+  {
+    name: "instagram",
+    url: "https://www.instagram.com/iam_madushan/",
+    id: 2,
+    userName: "@iam_madushan",
+  },
   {
     name: "facebook",
     url: "https://www.facebook.com/madushan.sooriyarathne/",
     id: 3,
+    userName: "@madushan.sooriyarathne",
   },
 ];
 
