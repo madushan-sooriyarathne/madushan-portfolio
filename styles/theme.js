@@ -15,6 +15,10 @@ const theme = {
   navBarFoldedWidth: "15rem",
   headerHeight: "10rem",
   footerHeight: "10rem",
+
+  responsiveLargest: "@media only screen and (max-width: 87.5em)",
+  responsiveLarger: "@media only screen and (max-width: 75em)",
+  responsiveLarge: "@media only screen and (max-width: 62.5em)",
 };
 
 export default theme;

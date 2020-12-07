@@ -21,6 +21,10 @@ const TextWrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding-left: 20rem;
+
+  ${(props) => props.theme.responsiveLarge} {
+    padding-left: 10rem;
+  }
 `;
 
 const CTAWrapper = styled.div`

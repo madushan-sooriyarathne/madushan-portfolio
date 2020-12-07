@@ -16,6 +16,10 @@ const GlobalStyles = createGlobalStyle`
         font-family: ${(props) => props.theme.fontPrimary};
         letter-spacing: 0.5px;
         color: ${(props) => props.theme.colorWhite};
+
+        ${(props) => props.theme.responsiveLargest} {
+          font-size: 50%;
+        }
     }
 
     body {

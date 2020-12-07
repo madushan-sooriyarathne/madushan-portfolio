@@ -47,7 +47,6 @@ const ContactDetails = styled.div`
 
 const SocialLinkGroup = styled.div`
   width: 50%;
-  height: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,6 +54,10 @@ const SocialLinkGroup = styled.div`
 
   & > *:not(:last-child) {
     margin-bottom: 2rem;
+  }
+
+  ${(props) => props.theme.responsiveLarger} {
+    width: 70%;
   }
 `;
 

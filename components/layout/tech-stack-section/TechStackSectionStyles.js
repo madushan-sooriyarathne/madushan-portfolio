@@ -10,6 +10,10 @@ const Section = styled.section`
   justify-items: center;
   padding: 3rem 10rem;
   min-height: 100%;
+
+  ${(props) => props.theme.responsiveLargest} {
+    padding: 2rem 0;
+  }
 `;
 
 const ContentWrapper = styled.div`
