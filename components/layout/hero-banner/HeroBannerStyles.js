@@ -48,6 +48,22 @@ const CTAWrapper = styled.div`
   ${(props) => props.theme.responsiveMedium} {
     align-items: center;
   }
+
+  & > h3 {
+    width: 80%;
+  }
+
+  ${(props) => props.theme.responsiveLarger} {
+    & > h3 {
+      width: 100%;
+    }
+  }
+
+  ${(props) => props.theme.responsiveMedium} {
+    & > h3 {
+      text-align: center;
+    }
+  }
 `;
 
 const CTAHeading = styled.h1`

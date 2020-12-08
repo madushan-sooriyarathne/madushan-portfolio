@@ -21,8 +21,10 @@ const HeroBanner = () => {
         <CTAWrapper>
           <HeadingPrimary>Hello! I'm</HeadingPrimary>
           <CTAHeading>Madushan</CTAHeading>
-          <HeadingSub>Creative Designer & Full Stack Web Developer</HeadingSub>
-          <HeadingSub>from Colombo, Sri Lanka.</HeadingSub>
+          <HeadingSub>
+            Creative Designer & Full Stack Web Developer from Colombo, Sri
+            Lanka.
+          </HeadingSub>
           <SocialMediasWrapper>
             <SocialMediaHeading>Find me on</SocialMediaHeading>
             <SocialIconGroup>
