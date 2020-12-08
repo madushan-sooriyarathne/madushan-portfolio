@@ -102,7 +102,7 @@ const QuoteWrapper = styled.div`
   padding: 5rem;
 
   ${(props) => props.theme.responsiveMedium} {
-    padding: 0;
+    padding: 0 0 5rem 0;
   }
 `;
 

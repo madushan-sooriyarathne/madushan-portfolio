@@ -33,7 +33,7 @@ const ContentWrapper = styled.div`
   }
 
   ${(props) => props.theme.responsiveSmall} {
-    padding: 0;
+    padding: 0 0 5rem 0;
   }
 `;
 

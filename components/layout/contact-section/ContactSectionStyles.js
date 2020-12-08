@@ -66,6 +66,10 @@ const ContactDetails = styled.div`
   align-items: center;
   justify-items: center;
   align-content: center;
+
+  ${(props) => props.theme.responsiveMedium} {
+    padding: 0 0 5rem 0;
+  }
 `;
 
 const SocialLinkGroup = styled.div`
