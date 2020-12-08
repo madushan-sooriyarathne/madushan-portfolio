@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Head from "next/head";
 import { ThemeProvider } from "styled-components";
 
 import theme from "../styles/theme";
@@ -14,10 +15,22 @@ const MainApp = ({ Component, pageProps }) => {
   });
 
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <>
+      <Head>
+        <title>
+          Madushan Sooriyarathne | Full Stack Developer & Creative Designer
+        </title>
+
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+      </Head>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
   );
 };
 
