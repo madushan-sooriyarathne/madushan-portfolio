@@ -3,6 +3,10 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   grid-column: content-start / content-end;
   padding: 0 10rem;
+
+  ${(props) => props.theme.responsiveLarge} {
+    padding: 0;
+  }
 `;
 
 const Image = styled.img`
@@ -14,17 +18,36 @@ const DetailsWrapper = styled.div`
   grid-column: content-start / content-end;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "ti st"
+    "ba st"
+    "de de"
+    "bu bu";
   grid-auto-rows: max-content;
   gap: 2rem;
   align-items: start;
   justify-items: start;
   background-color: ${(props) => props.theme.colorBlackLight};
 
-  padding: 2rem;
+  padding: 5rem;
+
+  ${(props) => props.theme.responsiveLarger} {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "ti"
+      "ba"
+      "st"
+      "de"
+      "bu";
+  }
+
+  ${(props) => props.theme.responsiveMedium} {
+    padding: 2rem;
+  }
 `;
 
 const TitleWrapper = styled.div`
-  grid-column: 1 / 2;
+  grid-area: ti;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -34,12 +57,11 @@ const TitleWrapper = styled.div`
 const WorkType = styled.p`
   font-size: 1.4rem;
   font-weight: 600;
-  color: ${(props) => props.theme.colorGray};
+  color: ${(props) => props.theme.colorGrayLight};
 `;
 
 const TechStackGroup = styled.div`
-  grid-column: 2 / 3;
-  grid-row: 1 / 3;
+  grid-area: st;
 
   justify-self: end;
 
@@ -47,11 +69,15 @@ const TechStackGroup = styled.div`
   align-items: flex-start;
   justify-content: flex-end;
   flex-wrap: wrap;
+
+  ${(props) => props.theme.responsiveLarger} {
+    justify-content: flex-start;
+    justify-self: start;
+  }
 `;
 
 const StatusBadge = styled.p`
-  grid-column: 1 / 2;
-  grid-row: 2 /3;
+  grid-area: ba;
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 1px;
@@ -76,8 +102,7 @@ const StatusBadge = styled.p`
 `;
 
 const WorkDescription = styled.p`
-  grid-column: 1 / 3;
-  grid-row: 3 / 4;
+  grid-area: de;
   font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: 1px;
@@ -99,8 +124,7 @@ const WorkDescription = styled.p`
 `;
 
 const ButtonWrapper = styled.p`
-  grid-column: 1 / 3;
-  grid-row: 4 / 5;
+  grid-area: bu;
 `;
 
 export {
