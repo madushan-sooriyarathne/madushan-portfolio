@@ -24,7 +24,7 @@ const AboutSection = () => {
     <Section>
       <TextWrapper>
         <TitleGroup>
-          <HeadingPrimary>About me</HeadingPrimary>
+          <HeadingPrimary>About me.</HeadingPrimary>
           <HeadingSub>Hi! I am Madushan [ma-dhu-shaa-n]</HeadingSub>
         </TitleGroup>
         <Description>
