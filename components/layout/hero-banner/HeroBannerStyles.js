@@ -11,6 +11,14 @@ const HeroSection = styled.section`
   grid-template-areas:
     "ct im"
     "so im";
+
+  ${(props) => props.theme.responsiveMedium} {
+    grid-template-columns: minmax(min-content, 1fr);
+    grid-template-areas:
+      "ct"
+      "im"
+      "so";
+  }
 `;
 
 const TextWrapper = styled.div`
@@ -25,12 +33,21 @@ const TextWrapper = styled.div`
   ${(props) => props.theme.responsiveLarge} {
     padding-left: 10rem;
   }
+
+  ${(props) => props.theme.responsiveMedium} {
+    padding-left: 0;
+    padding-top: 10rem;
+  }
 `;
 
 const CTAWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  ${(props) => props.theme.responsiveMedium} {
+    align-items: center;
+  }
 `;
 
 const CTAHeading = styled.h1`
@@ -39,6 +56,16 @@ const CTAHeading = styled.h1`
   color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: ${(props) => props.theme.colorWhite};
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: ${(props) => props.theme.colorGrayLight};
+    -webkit-text-stroke-width: 0;
+  }
+
+  ${(props) => props.theme.responsivePhone} {
+    font-size: 7rem;
+  }
 `;
 
 const SocialMediasWrapper = styled.div`
@@ -81,6 +108,7 @@ const ImageWrapper = styled.div`
 
   width: 100%;
   height: 100%;
+  min-height: 70rem;
   background-image: url("/static/img/low-key-portrait.jpg");
   background-repeat: no-repeat;
   background-size: contain;

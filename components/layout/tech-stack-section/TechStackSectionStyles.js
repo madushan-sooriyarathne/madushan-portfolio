@@ -27,6 +27,14 @@ const ContentWrapper = styled.div`
   justify-items: start;
 
   padding: 5rem;
+
+  ${(props) => props.theme.responsiveMedium} {
+    grid-template-columns: 1fr;
+  }
+
+  ${(props) => props.theme.responsiveSmall} {
+    padding: 0;
+  }
 `;
 
 const StackGroup = styled.div`
@@ -65,6 +73,10 @@ const ItemsWrapper = styled.div`
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
+
+  ${(props) => props.theme.responsiveMedium} {
+    justify-content: center;
+  }
 `;
 
 export { Section, ContentWrapper, StackGroup, StackHeading, ItemsWrapper };

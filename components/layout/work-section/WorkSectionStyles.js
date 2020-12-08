@@ -8,6 +8,7 @@ const Section = styled.div`
   grid-auto-rows: max-content;
   gap: 5rem;
   align-items: center;
+  justify-items: center;
   justify-content: center;
 
   width: 100%;
@@ -22,6 +23,17 @@ const WorkGroup = styled.div`
   );
   gap: 3rem;
   padding: 5rem 0;
+
+  ${(props) => props.theme.responsiveMedium} {
+    grid-template-columns: repeat(
+      2,
+      [col-start] minmax(min-content, 1fr) [col-end]
+    );
+  }
+
+  ${(props) => props.theme.responsiveSmall} {
+    grid-template-columns: minmax(min-content, 1fr);
+  }
 `;
 
 export { Section, WorkGroup };

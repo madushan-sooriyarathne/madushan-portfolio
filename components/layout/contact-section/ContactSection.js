@@ -40,6 +40,10 @@ const ContactSection = () => {
       <Form onSubmit={handleSubmit}>
         <TitleGroup>
           <HeadingPrimary>Wanna Talk?</HeadingPrimary>
+          <HeadingSub>
+            Feel like contacting me? Submit your message here and I will get
+            back to as soon as possible.
+          </HeadingSub>
         </TitleGroup>
         <InputField name="Name" onChange={updateName} value={name} required />
         <InputField

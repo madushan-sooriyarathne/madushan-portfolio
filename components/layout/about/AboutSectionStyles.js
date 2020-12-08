@@ -11,6 +11,13 @@ const Section = styled.section`
   grid-template-areas: "ab qo";
   gap: 5rem;
   min-height: 100%;
+
+  ${(props) => props.theme.responsiveMediumHigh} {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "ab"
+      "qo";
+  }
 `;
 
 const TextWrapper = styled.div`
@@ -21,6 +28,17 @@ const TextWrapper = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   padding: 2rem 5rem;
+
+  ${(props) => props.theme.responsiveMediumHigh} {
+    & > * {
+      text-align: center;
+      align-items: center;
+    }
+  }
+
+  ${(props) => props.theme.responsiveSmall} {
+    padding: 0;
+  }
 `;
 
 const Description = styled.div`
@@ -35,6 +53,11 @@ const QuickLinksWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  ${(props) => props.theme.responsiveMediumHigh} {
+    align-items: center;
+    align-self: center;
+  }
 `;
 
 const QuickLinksGroup = styled.div`
@@ -47,6 +70,10 @@ const QuickLinksGroup = styled.div`
 
   & > *:not(:last-child) {
     margin-right: 2rem;
+  }
+
+  ${(props) => props.theme.responsiveMediumHigh} {
+    justify-content: center;
   }
 `;
 
@@ -73,6 +100,10 @@ const QuoteWrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding: 5rem;
+
+  ${(props) => props.theme.responsiveMedium} {
+    padding: 0;
+  }
 `;
 
 const QuoteGroup = styled.div`
@@ -100,11 +131,20 @@ const QuoteGroup = styled.div`
   & > *:not(:last-child) {
     margin-bottom: 2rem;
   }
+
+  ${(props) => props.theme.responsiveMediumHigh} {
+    align-items: center;
+    padding: 2rem;
+  }
 `;
 
 const Quote = styled.p`
   font-size: 5rem;
   font-weight: 700;
+
+  ${(props) => props.theme.responsiveMediumHigh} {
+    text-align: center;
+  }
 `;
 
 const QuoteAuthor = styled.p`

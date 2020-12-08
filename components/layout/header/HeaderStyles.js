@@ -14,6 +14,10 @@ const HeaderWrapper = styled.header`
   padding: 2rem 10rem;
   background-color: transparent;
   z-index: 20;
+
+  ${(props) => props.theme.responsiveSmall} {
+    padding: 2rem 5rem;
+  }
 `;
 
 const Logo = styled.p`
@@ -24,6 +28,10 @@ const Logo = styled.p`
 
   &:hover {
     transform: scale(1.005);
+  }
+
+  ${(props) => props.theme.responsivePhone} {
+    font-size: 4rem;
   }
 `;
 
@@ -43,6 +51,11 @@ const SVGWrapper = styled.svg`
     stroke-width: 3;
     transition: stroke-dasharray 0.5s cubic-bezier(0.4, 0, 0.2, 1),
       stroke-dashoffset 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  ${(props) => props.theme.responsiveSmall} {
+    width: 6rem;
+    height: 6rem;
   }
 `;
 
@@ -104,6 +117,10 @@ const NavBarItem = styled(animated.a)`
 
   &:hover {
     opacity: 1;
+  }
+
+  ${(props) => props.theme.responsiveHeightSmall} {
+    font-size: 3rem;
   }
 `;
 

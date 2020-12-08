@@ -8,13 +8,21 @@ const Section = styled.div`
   grid-template-columns: repeat(2, minmax(min-content, 1fr));
   grid-template-rows: 1fr;
   grid-auto-rows: max-content;
+  grid-template-areas: "in so";
   gap: 5rem;
   align-items: center;
   justify-items: start;
+
+  ${(props) => props.theme.responsiveMedium} {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "in"
+      "so";
+  }
 `;
 
 const Form = styled.form`
-  grid-column: 1 / 2;
+  grid-area: in;
 
   display: flex;
   flex-direction: column;
@@ -28,10 +36,25 @@ const Form = styled.form`
   & > *:not(:last-child) {
     margin-bottom: 2rem;
   }
+
+  & > *:first-child {
+    margin-bottom: 5rem;
+  }
+
+  ${(props) => props.theme.responsiveSmall} {
+    padding: 5rem 0;
+  }
+
+  & > *:first-child {
+    ${(props) => props.theme.responsivePhone} {
+      align-items: center;
+      text-align: center;
+    }
+  }
 `;
 
 const ContactDetails = styled.div`
-  grid-column: 2 / 3;
+  grid-area: so;
 
   width: 100%;
   height: 100%;
@@ -58,6 +81,10 @@ const SocialLinkGroup = styled.div`
 
   ${(props) => props.theme.responsiveLarger} {
     width: 70%;
+  }
+
+  ${(props) => props.theme.responsivePhone} {
+    width: 100%;
   }
 `;
 
