@@ -1,5 +1,3 @@
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-
 import HeadingPrimary from "../../headings/heading-primary/HeadingPrimary";
 import Button from "../../button/Button";
 import TechStackItem from "../../tech-stack-item/TechStackItem";
@@ -42,11 +40,7 @@ const ExpandedWorkItem = ({ workItem }) => {
         <StatusBadge status={workItem.status.toLowerCase().replace(" ", "-")}>
           {workItem.status}
         </StatusBadge>
-        <WorkDescription
-          dangerouslySetInnerHTML={{
-            __html: documentToHtmlString(workItem.description),
-          }}
-        />
+        <WorkDescription>{workItem.description}</WorkDescription>
         <ButtonWrapper>
           <Button onClick={handleRedirect}>Visit Project</Button>
         </ButtonWrapper>
