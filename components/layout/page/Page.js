@@ -3,6 +3,7 @@ import Footer from "../footer/Footer";
 import Header from "../header/Header";
 import { PageWrapper, ContentWrapper } from "./PageStyles";
 import Floater from "../../floater/Floater";
+import SnackBar from "../../snack-bar/SnackBar";
 
 const Page = ({ children }) => {
   return (
@@ -12,6 +13,7 @@ const Page = ({ children }) => {
       <ContentWrapper>{children}</ContentWrapper>
       <Footer />
       <Floater />
+      <SnackBar />
     </PageWrapper>
   );
 };
