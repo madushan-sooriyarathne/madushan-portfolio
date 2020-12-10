@@ -15,6 +15,7 @@
     "@contentful/rich-text-html-renderer": "^14.1.2",
     "contentful": "^8.0.3",
     "next": "^10.0.3",
+    "node-mailer": "^0.1.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-flip-toolkit": "^7.0.13",
