@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Head from "next/head";
 import { ThemeProvider } from "styled-components";
+import NotificationContextProvider from "../context/NotificationContextProvider";
 
 import theme from "../styles/theme";
 import GlobalStyles from "../styles/GlobalStyles";
@@ -27,8 +28,10 @@ const MainApp = ({ Component, pageProps }) => {
         />
       </Head>
       <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        <Component {...pageProps} />
+        <NotificationContextProvider>
+          <GlobalStyles />
+          <Component {...pageProps} />
+        </NotificationContextProvider>
       </ThemeProvider>
     </>
   );
