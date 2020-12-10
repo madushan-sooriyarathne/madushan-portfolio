@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { NotificationDispatchContext } from "../../../context/NotificationContextProvider";
 import useInputState from "../../../hooks/useInputState";
 
 import InputField from "../../input-field/InputField";
@@ -19,16 +21,25 @@ import {
 } from "./ContactSectionStyles";
 
 const ContactSection = () => {
+  // state
   const [name, updateName, resetName] = useInputState("");
   const [email, updateEmail, resetEmail] = useInputState("");
   const [message, updateMessage, resetMessage] = useInputState("");
 
+  // context
+  const setNotification = useContext(NotificationDispatchContext);
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    alert(`${name} ${email} ${message}`);
     // Submit to API and that magic
 
+    // show notification
+    setNotification(
+      `Hey ${
+        name.split(" ")[0]
+      }. Thanks for you inquiry. I have received it and will get back to as soon as possible`
+    );
     // clear fields
     resetName();
     resetEmail();
