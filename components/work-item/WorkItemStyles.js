@@ -42,7 +42,7 @@ const TitleWrapper = styled.div`
 const WorkType = styled.p`
   font-size: 1.4rem;
   font-weight: 600;
-  color: ${(props) => props.theme.colorGray};
+  color: ${(props) => props.theme.colorGrayLight};
 `;
 
 const StatusBadge = styled.p`
