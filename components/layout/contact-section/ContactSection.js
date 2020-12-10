@@ -90,7 +90,7 @@ const ContactSection = () => {
       <ContactDetails>
         <SocialLinkGroup>
           {socialLinks.map((link) => (
-            <SocialBadge social={link} />
+            <SocialBadge social={link} key={link.id} />
           ))}
         </SocialLinkGroup>
         <ContactDetailsGroup>
