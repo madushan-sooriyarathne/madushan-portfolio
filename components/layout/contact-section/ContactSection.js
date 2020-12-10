@@ -29,21 +29,36 @@ const ContactSection = () => {
   // context
   const setNotification = useContext(NotificationDispatchContext);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     // Submit to API and that magic
+    const res = await fetch("/api/inquire", {
+      method: "POST",
+      credentials: "same-origin",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email, message }),
+    });
 
-    // show notification
-    setNotification(
-      `Hey ${
-        name.split(" ")[0]
-      }. Thanks for you inquiry. I have received it and will get back to as soon as possible`
-    );
-    // clear fields
-    resetName();
-    resetEmail();
-    resetMessage();
+    if (res.status === 200) {
+      // show notification
+      setNotification(
+        `Hey ${
+          name.split(" ")[0]
+        }. Thanks for you inquiry. I have received it and will get back to as soon as possible`
+      );
+      // clear fields
+      resetName();
+      resetEmail();
+      resetMessage();
+    } else {
+      setNotification(
+        "Sorry! We encountered an error while submitting your inquiry. Please try again in a bit."
+      );
+    }
   };
 
   return (
