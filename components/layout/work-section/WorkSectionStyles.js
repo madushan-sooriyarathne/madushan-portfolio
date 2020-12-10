@@ -16,6 +16,7 @@ const Section = styled.div`
 `;
 
 const WorkGroup = styled.div`
+  justify-self: stretch;
   display: grid;
   grid-template-columns: repeat(
     3,
