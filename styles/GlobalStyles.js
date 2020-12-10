@@ -15,6 +15,7 @@ const GlobalStyles = createGlobalStyle`
         font-weight: 400;
         font-family: ${(props) => props.theme.fontPrimary};
         letter-spacing: 0.5px;
+        scroll-behavior: smooth;
         color: ${(props) => props.theme.colorWhite};
 
         ${(props) => props.theme.responsiveLargest} {
