@@ -17,7 +17,7 @@ const TechStackSection = ({ stacks }) => {
       <TitleGroup centered={true}>
         <HeadingPrimary>What I use.</HeadingPrimary>
         <HeadingSub>
-          This is my current go-to stack. This can change time to time.
+          My current go-to stack of languages/technologies
         </HeadingSub>
       </TitleGroup>
       <ContentWrapper>

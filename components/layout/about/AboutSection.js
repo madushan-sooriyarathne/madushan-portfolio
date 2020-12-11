@@ -29,7 +29,7 @@ const AboutSection = () => {
         </TitleGroup>
         <Description>
           I’m a Creative Designer & Full Stack Web Developer and I design and
-          code beautifully simple things. and I love what I do. I really liked
+          code beautifully simple things. Also, I love what I do. I really liked
           tech and interested in them when I was a kid. And I started teaching
           myself coding when I was 16. I’m quietly confident, naturally curious,
           and perpetually working on improving my chops one design problem at a
@@ -41,10 +41,10 @@ const AboutSection = () => {
           bringing ideas to life with clearly written code.
           <br />
           <br /> I run a small creative marketing agency called
-          <StyledLink link="https://advertaro.lk/" text="Advertaro" />
-          with a partner where I’m responsible for designing and development. In
-          my free time, I usually work on my personal projects or hone my craft
-          by learning new stuff. If not I’m probably playing a game with my
+          <StyledLink link="https://advertaro.lk/" text="Advertaro" /> with a
+          partner where I’m responsible for designing and development. In my
+          free time, I usually work on my personal projects or hone my craft by
+          learning new stuff. If not I’m probably playing a game with my
           buddies.
         </Description>
         <QuickLinksWrapper>

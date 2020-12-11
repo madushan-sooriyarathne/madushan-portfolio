@@ -18,10 +18,7 @@ const WorkSection = ({ works }) => {
     <Section>
       <TitleGroup centered>
         <HeadingPrimary>My Recent Work.</HeadingPrimary>
-        <HeadingSub>
-          Both recent Client & Personal projects are here because you cannot
-          draw a line between work and fun when you love your job
-        </HeadingSub>
+        <HeadingSub>Check what I've been doing lately</HeadingSub>
       </TitleGroup>
       <WorkGroup>
         {works.map((item) => (

@@ -2,14 +2,27 @@ import styled from "styled-components";
 
 const LinkWrapper = styled.a`
   outline: none;
-  text-decoration: underline;
+  text-decoration: none;
   padding: 2px 5px;
   color: inherit;
-  border-radius: 2px;
-  transition: background-color 0.2s ease-in;
+  background-color: transparent;
+  position: relative;
 
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    width: 90%;
+    height: 4px;
+    background-color: ${(props) => props.theme.colorGrayLight};
+    transform: translateX(-50%) rotate(-2deg);
+    z-index: -1;
+    transition: height 0.2s ease-in-out;
+  }
+
+  &:hover::before {
+    height: 80%;
   }
 `;
 
