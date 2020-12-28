@@ -77,6 +77,7 @@ const ContactSection = () => {
           type="email"
           onChange={updateEmail}
           value={email}
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           required
         />
         <InputField
