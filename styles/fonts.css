@@ -4,6 +4,7 @@
   font-family: "Almondita Regular";
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local("Almondita Regular"),
     url("/static/fonts/almondita.woff") format("woff");
 }
@@ -11,15 +12,8 @@
 @font-face {
   font-family: "Avenir Next";
   font-style: normal;
-  font-weight: 200;
-  src: local("Avenir Next LT Pro Condensed Italic"),
-    url("/static/fonts/AvenirNextLTPro-UltLt.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Avenir Next";
-  font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local("Avenir Next LT Pro Condensed Italic"),
     url("/static/fonts/AvenirNextLTPro-Regular.woff") format("woff");
 }
@@ -28,6 +22,7 @@
   font-family: "Avenir Next";
   font-style: normal;
   font-weight: 600;
+  font-display: swap;
   src: local("Avenir Next LT Pro Condensed Italic"),
     url("/static/fonts/AvenirNextLTPro-Demi.woff") format("woff");
 }
@@ -36,6 +31,7 @@
   font-family: "Avenir Next";
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: local("Avenir Next LT Pro Condensed Italic"),
     url("/static/fonts/AvenirNextLTPro-Bold.woff") format("woff");
 }
