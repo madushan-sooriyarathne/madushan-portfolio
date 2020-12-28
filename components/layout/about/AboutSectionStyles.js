@@ -121,7 +121,7 @@ const QuoteGroup = styled.div`
     left: -1.4rem;
     width: 50%;
     height: 60%;
-    background-image: url("/static/img/quote.png");
+    background-image: url("/static/img/quote.webp");
     background-size: contain;
     background-repeat: no-repeat;
     z-index: -1;
