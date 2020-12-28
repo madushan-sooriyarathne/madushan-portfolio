@@ -35,7 +35,10 @@ class MyDocument extends Document {
           {this.props.styleTags}
 
           <link rel="manifest" href="manifest.json" />
-
+          <meta
+            name="description"
+            content="Full Stack Web Developer based on Colombo, Sri Lanka. I build SEO friendly websites and other web apps with latest frontend technologies."
+          />
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="application-name" content="Madushan" />
@@ -72,6 +75,20 @@ class MyDocument extends Document {
             sizes="192x192"
             href="/static/icons/icon-192x192.png"
           ></link>
+
+          {/* Google Analytics site tag */}
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-Y43VC2CM9W"
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-Y43VC2CM9W');`,
+            }}
+          />
         </Head>
         <body style={{ visibility: "hidden" }}>
           <Main />
