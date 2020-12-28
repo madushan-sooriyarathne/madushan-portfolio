@@ -1,0 +1,49 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+  <url>
+    <loc>https://madushan.dev/</loc>
+    <lastmod>2020-12-28</lastmod>
+  </url>
+   <url>
+    <loc>https://madushan.dev/about</loc>
+    <lastmod>2020-12-28</lastmod>
+  </url>
+   <url>
+    <loc>https://madushan.dev/tech-stack</loc>
+    <lastmod>2020-12-28</lastmod>
+  </url>
+  <url>
+    <loc>https://madushan.dev/work</loc>
+    <lastmod>2020-12-28</lastmod>
+  </url>
+  <url>
+    <loc>https://madushan.dev/work/madushan-portfolio</loc>
+    <lastmod>2020-12-28</lastmod>
+  </url>
+
+    <url>
+    <loc>https://madushan.dev/work/advertaro</loc>
+    <lastmod>2020-12-28</lastmod>
+  </url>
+
+    <url>
+    <loc>https://madushan.dev/work/color-palette-app</loc>
+    <lastmod>2020-12-28</lastmod>
+  </url>
+
+    <url>
+    <loc>https://madushan.dev/work/winter-fashion</loc>
+    <lastmod>2020-12-28</lastmod>
+  </url>
+
+    <url>
+    <loc>https://madushan.dev/work/world-weather</loc>
+    <lastmod>2020-12-28</lastmod>
+  </url>
+    <url>
+    <loc>https://madushan.dev/contact</loc>
+    <lastmod>2020-12-28</lastmod>
+  </url>
+  
+</urlset>
