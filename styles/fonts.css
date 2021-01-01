@@ -14,8 +14,8 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Avenir Next LT Pro Condensed Italic"),
-    url("/static/fonts/AvenirNextLTPro-Regular.woff") format("woff");
+  src: local("AvenirNextCyr-Regular"),
+    url("/static/fonts/avenir-next-regular.woff") format("woff");
 }
 
 @font-face {
@@ -23,8 +23,8 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: local("Avenir Next LT Pro Condensed Italic"),
-    url("/static/fonts/AvenirNextLTPro-Demi.woff") format("woff");
+  src: local("AvenirNextCyr-Demi"),
+    url("/static/fonts/avenir-next-demi.woff") format("woff");
 }
 
 @font-face {
@@ -32,14 +32,15 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local("Avenir Next LT Pro Condensed Italic"),
-    url("/static/fonts/AvenirNextLTPro-Bold.woff") format("woff");
+  src: local("AvenirNextCyr-Bold"),
+    url("/static/fonts/avenir-next-bold.woff") format("woff");
 }
 
 @font-face {
   font-family: "Avenir Next";
   font-style: normal;
   font-weight: 900;
-  src: local("Avenir Next LT Pro Condensed Italic"),
-    url("/static/fonts/AvenirNextLTPro-Heavy.woff") format("woff");
+  font-display: swap;
+  src: local("AvenirNextCyr-Heavy"),
+    url("/static/fonts/avenir-next-heavy.woff") format("woff");
 }
