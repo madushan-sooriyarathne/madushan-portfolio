@@ -29,7 +29,7 @@ const HeroBanner = () => {
             <SocialMediaHeading>Find me on</SocialMediaHeading>
             <SocialIconGroup>
               {socialLinks.map((link) => (
-                <a href={link.url} target="_blank" rel="noopener">
+                <a href={link.url} target="_blank" rel="noopener" key={link.id}>
                   <SocialIcon>
                     <use
                       xlinkHref={`/static/svg/sprites.svg#${link.name}`}

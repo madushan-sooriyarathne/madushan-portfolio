@@ -8,16 +8,15 @@ const HeroSection = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: minmax(min-content, 1fr) min-content;
-  grid-template-areas:
-    "ct im"
-    "so im";
+  grid-template-areas: "ct im";
+
+  gap: 5rem;
 
   ${(props) => props.theme.responsiveMedium} {
     grid-template-columns: minmax(min-content, 1fr);
     grid-template-areas:
       "ct"
-      "im"
-      "so";
+      "im";
   }
 `;
 
