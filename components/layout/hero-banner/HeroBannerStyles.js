@@ -125,7 +125,7 @@ const ImageWrapper = styled.div`
   width: 100%;
   height: 100%;
   min-height: 70rem;
-  background-image: url("/static/img/low-key-portrait.jpg");
+  background-image: url("/static/img/low-key-portrait.webp");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
