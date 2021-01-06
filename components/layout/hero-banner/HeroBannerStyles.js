@@ -7,7 +7,7 @@ const HeroSection = styled.section`
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: minmax(min-content, 1fr) min-content;
+  grid-template-rows: minmax(min-content, 1fr);
   grid-template-areas: "ct im";
 
   gap: 5rem;
