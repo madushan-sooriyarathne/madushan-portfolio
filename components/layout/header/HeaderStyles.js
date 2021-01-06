@@ -107,7 +107,7 @@ const NavLinkWrapper = styled(animated.div)`
 
 const NavBarItem = styled(animated.a)`
   font-size: 5rem;
-  font-weight: 900;
+  font-weight: 700;
   color: ${(props) => props.theme.colorWhite};
   opacity: 0.5;
   letter-spacing: 2px;
