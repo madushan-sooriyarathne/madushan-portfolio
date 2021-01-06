@@ -73,11 +73,6 @@ const CTAHeading = styled.h1`
   -webkit-text-stroke-color: ${(props) => props.theme.colorWhite};
   transition: color 0.2s ease-in-out;
 
-  &:hover {
-    color: ${(props) => props.theme.colorGrayLight};
-    -webkit-text-stroke-width: 0;
-  }
-
   ${(props) => props.theme.responsivePhone} {
     font-size: 7rem;
   }
