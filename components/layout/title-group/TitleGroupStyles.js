@@ -7,6 +7,10 @@ const Group = styled.div`
   text-align: ${(props) => (props.centered ? "center" : "left")};
   width: ${(props) => (props.centered ? "60%" : "100%")};
 
+  & > *:first-child {
+    margin-bottom: 1rem;
+  }
+
   ${(props) => props.theme.responsiveMediumHigh} {
     width: ${(props) => (props.centered ? "80%" : "100%")};
   }
