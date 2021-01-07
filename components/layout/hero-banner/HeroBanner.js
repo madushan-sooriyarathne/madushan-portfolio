@@ -22,7 +22,7 @@ const HeroBanner = () => {
           <HeadingPrimary>Hello! I'm</HeadingPrimary>
           <CTAHeading>Madushan</CTAHeading>
           <HeadingSub>
-            Creative Designer & Full Stack Web Developer from Colombo, Sri
+            Creative Designer & Full Stack Web Developer based in Colombo, Sri
             Lanka.
           </HeadingSub>
           <SocialMediasWrapper>
