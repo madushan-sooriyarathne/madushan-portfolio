@@ -23,8 +23,8 @@ const GlobalStyles = createGlobalStyle`
         }
 
         ${(props) => props.theme.responsiveSmall} {
-   font-size: 43.75%;
-  }
+          font-size: 43.75%;
+        }
     }
 
     body {
@@ -52,7 +52,25 @@ const GlobalStyles = createGlobalStyle`
       }
     }
 
-
 `;
 
+const consoleLogStylesPrimary = `
+      font-size: 20px;
+      font-weight: 500;
+      color: #f7f7f7;
+      background-color: #030303;
+      padding: 10px;
+      border-radius: 5px;
+    `;
+
+const consoleLogStylesSecondary = `
+     font-size: 15px;
+      font-weight: 400;
+      color: #f7f7f7;
+      background-color: #222222;
+      padding: 5px;
+      border-radius: 5px;
+  `;
+
 export default GlobalStyles;
+export { consoleLogStylesPrimary, consoleLogStylesSecondary };
