@@ -28,17 +28,18 @@ const AboutSection = () => {
           <HeadingSub>Hi! I am Madushan [ma-dhu-shaa-n]</HeadingSub>
         </TitleGroup>
         <Description>
-          I’m a Creative Designer & Full Stack Web Developer and I design and
-          code beautifully simple things. Also, I love what I do. I really liked
-          tech and interested in them when I was a kid. And I started teaching
-          myself coding when I was 16. I’m quietly confident, naturally curious,
-          and perpetually working on improving my chops one design problem at a
-          time.
+          I’m a Creative Designer & Full Stack Web Developer based in Colombo,
+          Sri Lanka. I design and code beautifully simple things and I love what
+          I do. I really liked tech and interested in them when I was a kid. And
+          I started teaching myself coding when I was 16. I’m quietly confident,
+          naturally curious, and perpetually working on improving my chops one
+          design problem at a time.
           <br />
-          <br /> As a creative designer, I value simple content structure, clean
-          design patterns, and thoughtful interactions. When it comes to
-          developing stuff, I like to code things from scratch and enjoy
-          bringing ideas to life with clearly written code.
+          <br />
+          As a Developer, I like to code things from scratch and enjoy bringing
+          ideas to life with clearly written code. When It's comes to designing,
+          I value simple content structure, clean design patterns, and
+          thoughtful interactions.
           <br />
           <br /> I run a small creative marketing agency called
           <StyledLink link="https://advertaro.lk/" text="Advertaro" /> with a
