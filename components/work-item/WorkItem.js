@@ -14,7 +14,6 @@ const WorkItem = ({ workItem, onClick }) => {
   const [loaded, setLoaded] = useState(false);
 
   const handleLoad = () => {
-    console.log("loaded");
     setLoaded(true);
   };
 
