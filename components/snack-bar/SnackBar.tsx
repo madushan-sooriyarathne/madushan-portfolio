@@ -1,16 +1,18 @@
-import { useContext } from "react";
-
+import { Dispatch, SetStateAction, useContext } from "react";
 import {
   NotificationContext,
   NotificationDispatchContext,
 } from "../../context/NotificationContextProvider";
 
 import { Bar, Message, CloseButton, Icon } from "./SnackBarStyles";
-const SnackBar = () => {
-  const notification = useContext(NotificationContext);
-  const setNotification = useContext(NotificationDispatchContext);
 
-  const handleClose = () => {
+const SnackBar: React.FC = (): JSX.Element => {
+  const notification = useContext<string | null>(NotificationContext);
+  const setNotification: Dispatch<SetStateAction<string | null>> = useContext<
+    Dispatch<SetStateAction<string | null>>
+  >(NotificationDispatchContext);
+
+  const handleClose = (): void => {
     setNotification(null);
   };
 

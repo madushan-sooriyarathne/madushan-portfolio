@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-const Bar = styled.div`
+interface BarProps {
+  show: string | null;
+}
+
+const Bar = styled.div<BarProps>`
   position: fixed;
   left: 5rem;
   bottom: 5rem;
@@ -14,7 +18,7 @@ const Bar = styled.div`
 
   padding: 2rem;
   width: 40rem;
-  background-color: ${(props) => props.theme.colorGray};
+  background-color: ${(props) => props.theme.colors.colorGray};
 
   transition: transform 0.2s ease-in-out;
 `;
@@ -24,7 +28,7 @@ const Message = styled.p`
 
   font-size: 1.4rem;
   font-weight: 500;
-  color: ${(props) => props.theme.colorWhite};
+  color: ${(props) => props.theme.colors.colorWhite};
 `;
 
 const CloseButton = styled.div`
@@ -49,7 +53,7 @@ const CloseButton = styled.div`
     border-radius: 50%;
     transform: scale(0);
     transform-origin: 50% 50%;
-    background-color: ${(props) => props.theme.colorGrayLight};
+    background-color: ${(props) => props.theme.colors.colorGrayLight};
     transition: transform 0.2s ease-in-out;
   }
 
@@ -61,7 +65,7 @@ const CloseButton = styled.div`
 const Icon = styled.svg`
   width: 100%;
   height: 100%;
-  fill: ${(props) => props.theme.colorWhite};
+  fill: ${(props) => props.theme.colors.colorWhite};
 `;
 
 export { Bar, Message, CloseButton, Icon };
