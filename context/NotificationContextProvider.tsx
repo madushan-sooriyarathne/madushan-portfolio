@@ -1,14 +1,20 @@
 import { createContext, useState } from "react";
 
-const NotificationContext = createContext();
-const NotificationDispatchContext = createContext();
+interface Props {
+  children: React.ReactNode;
+}
 
-const NotificationContextProvider = ({ children }) => {
-  const [notification, setNotification] = useState(null);
+const NotificationContext = createContext<string | null>("");
+const NotificationDispatchContext = createContext<any>(""); // TODO - Find better type annotation for this
 
-  const updateNotification = (message) => {
+const NotificationContextProvider: React.FC<Props> = ({
+  children,
+}: Props): JSX.Element => {
+  const [notification, setNotification] = useState<string | null>("");
+
+  const updateNotification = (message: string) => {
     setNotification(message);
-    setTimeout(() => {
+    setTimeout((): void => {
       setNotification(null);
     }, 3000);
   };
