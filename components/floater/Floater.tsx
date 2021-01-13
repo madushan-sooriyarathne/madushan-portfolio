@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, MouseEvent } from "react";
 import { Wrapper, Icon } from "./FloaterStyles";
 
-const Floater = () => {
-  const [show, setShow] = useState(false);
+const Floater: React.FC = (): JSX.Element => {
+  const [show, setShow] = useState<boolean>(false);
 
-  useEffect(() => {
+  useEffect((): void => {
     window.addEventListener("scroll", () => {
-      const yCords = window.scrollY;
+      const yCords: number = window.scrollY;
+
       if (yCords >= 200) {
         setShow(true);
       } else {
@@ -15,7 +16,7 @@ const Floater = () => {
     });
   });
 
-  const handleClick = () => {
+  const handleClick = (event: MouseEvent<HTMLDivElement>): void => {
     window.scroll(0, 0);
   };
 

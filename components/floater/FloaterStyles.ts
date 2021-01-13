@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-const Wrapper = styled.div`
+interface WrapperProps {
+  visible: boolean;
+}
+
+const Wrapper = styled.div<WrapperProps>`
   position: fixed;
   bottom: 5rem;
   right: 5rem;
@@ -9,8 +13,8 @@ const Wrapper = styled.div`
 
   padding: 1rem;
   border-radius: 5px;
-  background-color: ${(props) => props.theme.colorGrayLight};
-  box-shadow: ${(props) => `0 4px 8px 0 ${props.theme.colorBlack}`};
+  background-color: ${(props) => props.theme.colors.colorGrayLight};
+  box-shadow: ${(props) => `0 4px 8px 0 ${props.theme.colors.colorBlack}`};
   transition: transform 0.2s ease-in-out;
   cursor: pointer;
 
@@ -22,7 +26,7 @@ const Wrapper = styled.div`
 const Icon = styled.svg`
   width: 3rem;
   height: 3rem;
-  fill: ${(props) => props.theme.colorBlack};
+  fill: ${(props) => props.theme.colors.colorBlack};
 `;
 
 export { Wrapper, Icon };
