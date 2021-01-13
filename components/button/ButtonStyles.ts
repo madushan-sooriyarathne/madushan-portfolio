@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface ButtonTextProps {
+  readonly isBig: boolean;
+}
+
 const CustomButton = styled.button`
   display: flex;
   align-items: center;
@@ -35,12 +39,12 @@ const CustomButton = styled.button`
   }
 `;
 
-const ButtonText = styled.p`
+const ButtonText = styled.p<ButtonTextProps>`
   font-size: ${(props) => (props.isBig ? "2rem" : "1.5rem")};
   font-weight: 600;
   letter-spacing: 2px;
   line-height: 1;
-  color: ${(props) => props.theme.colorWhite};
+  color: ${(props) => props.theme.colors.colorWhite};
 `;
 
 const Arrow = styled.div`

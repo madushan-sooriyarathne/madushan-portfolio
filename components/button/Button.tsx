@@ -1,14 +1,24 @@
+import { MouseEvent } from "react";
 import Link from "next/link";
 import { CustomButton, Arrow, ButtonText } from "./ButtonStyles";
 
-const Button = ({
+interface Props {
+  onClick: (event: MouseEvent<HTMLButtonElement>) => void;
+  type: string;
+  disabled: boolean;
+  isBig: boolean;
+  route: string;
+  children: React.ReactNode;
+}
+
+const Button: React.FC<Props> = ({
   onClick,
   children,
   type = "button",
   disabled = false,
   isBig = false,
   route = null,
-}) => {
+}: Props): JSX.Element => {
   return (
     <>
       {route ? (
