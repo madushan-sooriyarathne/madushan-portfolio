@@ -1,3 +1,44 @@
+import "styled-components";
+
+declare module "styled-components" {
+  interface DefaultTheme {
+    colors: {
+      colorBlack: string;
+      colorBlackLight: string;
+      colorWhite: string;
+      colorGray: string;
+      colorGrayLight: string;
+      colorSuccess: string;
+      colorSuccessRGB: string;
+      colorWarning: string;
+      colorWarningRGB: string;
+      colorDanger: string;
+      colorDangerRGB: string;
+    };
+
+    fonts: {
+      fontPrimary: string;
+      fontSecondary: string;
+    };
+
+    sizes: {
+      navBarFoldedWidth: string;
+      headerHeight: string;
+      footerHeight: string;
+    };
+    responsive: {
+      largest: string;
+      larger: string;
+      large: string;
+      mediumHigh: string;
+      medium: string;
+      small: string;
+      phone: string;
+      heightSmall: string;
+    };
+  }
+}
+
 const theme = {
   colorBlack: "#030303",
   colorBlackLight: "#222222",
