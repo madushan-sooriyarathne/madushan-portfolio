@@ -19,19 +19,19 @@ const Input = styled.input`
   padding: 3rem 1rem 1rem 1rem;
   border: none;
   outline: none;
-  border-bottom: ${(props) => `2px solid ${props.theme.colorWhite}`};
+  border-bottom: ${(props) => `2px solid ${props.theme.colors.colorWhite}`};
   font-size: 1.5rem;
   font-weight: 400;
   background-color: transparent;
-  color: ${(props) => props.theme.colorWhite};
+  color: ${(props) => props.theme.colors.colorWhite};
   transition: border 0.2s ease-in;
 
   &:not(:placeholder-shown):invalid {
-    border-bottom: ${(props) => `2px solid ${props.theme.colorDanger}`};
+    border-bottom: ${(props) => `2px solid ${props.theme.colors.colorDanger}`};
   }
 
   &:not(:placeholder-shown):valid {
-    border-bottom: ${(props) => `2px solid ${props.theme.colorSuccess}`};
+    border-bottom: ${(props) => `2px solid ${props.theme.colors.colorSuccess}`};
   }
 
   &:placeholder-shown {
@@ -45,7 +45,7 @@ const Input = styled.input`
   &::placeholder {
     font-size: 1.5rem;
     font-weight: 400;
-    font-family: ${(props) => props.theme.fontPrimary};
+    font-family: ${(props) => props.theme.fonts.fontPrimary};
   }
 `;
 
@@ -56,26 +56,26 @@ const TextArea = styled.textarea`
   padding: 3rem 1rem 1rem 1rem;
   border: none;
   outline: none;
-  border-bottom: ${(props) => `2px solid ${props.theme.colorWhite}`};
+  border-bottom: ${(props) => `2px solid ${props.theme.colors.colorWhite}`};
   font-size: 1.5rem;
-  font-family: ${(props) => props.theme.fontPrimary};
+  font-family: ${(props) => props.theme.fonts.fontPrimary};
   font-weight: 400;
   background-color: transparent;
-  color: ${(props) => props.theme.colorWhite};
+  color: ${(props) => props.theme.colors.colorWhite};
   transition: border 0.2s ease-in;
 
   &:not(:placeholder-shown):invalid {
-    border-bottom: ${(props) => `2px solid ${props.theme.colorDanger}`};
+    border-bottom: ${(props) => `2px solid ${props.theme.colors.colorDanger}`};
   }
 
   &:not(:placeholder-shown):valid {
-    border-bottom: ${(props) => `2px solid ${props.theme.colorSuccess}`};
+    border-bottom: ${(props) => `2px solid ${props.theme.colors.colorSuccess}`};
   }
 
   &::placeholder {
     font-size: 1.5rem;
     font-weight: 400;
-    font-family: ${(props) => props.theme.fontPrimary};
+    font-family: ${(props) => props.theme.fonts.fontPrimary};
   }
 
   &:placeholder-shown {
@@ -94,7 +94,7 @@ const Label = styled.label`
 
   font-size: 1.2rem;
   font-weight: 600;
-  color: ${(props) => props.theme.colorGray};
+  color: ${(props) => props.theme.colors.colorGray};
 
   opacity: 1;
   transform: translateY(0);

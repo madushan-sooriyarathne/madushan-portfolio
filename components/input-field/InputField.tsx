@@ -1,6 +1,19 @@
+import { ChangeEvent } from "react";
 import { Wrapper, Input, Label, TextArea } from "./InputFieldStyles";
 
-const InputField = ({
+interface Props {
+  name: string;
+  onChange: (
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => void;
+  value: string;
+  type: string;
+  pattern?: string;
+  textarea?: boolean;
+  required?: boolean;
+}
+
+const InputField: React.FC<Props> = ({
   name,
   onChange,
   value,
@@ -8,7 +21,7 @@ const InputField = ({
   type = "text",
   textarea = false,
   required = true,
-}) => {
+}: Props): JSX.Element => {
   return (
     <Wrapper>
       {textarea ? (
@@ -16,11 +29,9 @@ const InputField = ({
           id={name}
           name={`${name}  ${required ? "(Required)" : ""}`}
           placeholder={name}
-          type={type}
           value={value}
           onChange={onChange}
           required={required}
-          pattern={pattern}
         />
       ) : (
         <Input
