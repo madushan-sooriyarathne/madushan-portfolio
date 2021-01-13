@@ -4,10 +4,10 @@ import { CustomButton, Arrow, ButtonText } from "./ButtonStyles";
 
 interface Props {
   onClick: (event: MouseEvent<HTMLButtonElement>) => void;
-  type: string;
-  disabled: boolean;
-  isBig: boolean;
-  route: string;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
+  isBig?: boolean;
+  route?: string | null;
   children: React.ReactNode;
 }
 
