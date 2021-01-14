@@ -18,18 +18,18 @@ const TechItem = styled.div`
   justify-items: start;
 
   background-color: transparent;
-  border: ${(props) => `1px solid ${props.theme.colorWhite}`};
+  border: ${(props) => `1px solid ${props.theme.colors.colorWhite}`};
   border-radius: 5px;
   margin-bottom: 2rem;
   margin-right: 2rem;
   transition: background-color 0.2s ease-in, border 0.2s ease-in;
 
   &:hover {
-    background-color: ${(props) => props.theme.colorWhite};
-    border: ${(props) => `1px solid ${props.theme.colorBlack}`};
+    background-color: ${(props) => props.theme.colors.colorWhite};
+    border: ${(props) => `1px solid ${props.theme.colors.colorBlack}`};
 
     & ${TechItemName} {
-      color: ${(props) => props.theme.colorBlack};
+      color: ${(props) => props.theme.colors.colorBlack};
     }
   }
 `;
