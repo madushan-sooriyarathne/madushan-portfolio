@@ -15,27 +15,27 @@ const Badge = styled.div`
   justify-items: start;
   padding: 2rem;
   background-color: transparent;
-  border: ${(props) => `2px solid ${props.theme.colorWhite}`};
+  border: ${(props) => `2px solid ${props.theme.colors.colorWhite}`};
   transition: background-color 0.3s ease;
 
   cursor: pointer;
 
   &:hover {
-    background-color: ${(props) => props.theme.colorWhite};
+    background-color: ${(props) => props.theme.colors.colorWhite};
   }
 
   &:hover > p {
-    color: ${(props) => props.theme.colorBlack};
+    color: ${(props) => props.theme.colors.colorBlack};
   }
 
   &:hover > svg {
-    fill: ${(props) => props.theme.colorBlack};
+    fill: ${(props) => props.theme.colors.colorBlack};
     transform: scale(1.1);
   }
 `;
 
 const Logo = styled.svg`
-  fill: ${(props) => props.theme.colorWhite};
+  fill: ${(props) => props.theme.colors.colorWhite};
   width: 3rem;
   height: 3rem;
   justify-self: center;

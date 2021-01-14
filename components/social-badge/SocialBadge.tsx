@@ -1,7 +1,15 @@
 import { Badge, Logo, Text } from "./SocialBadgeStyles";
 
-const SocialBadge = ({ social }) => {
-  const handleClick = () => {
+interface Props {
+  social: {
+    name: string;
+    userName: string;
+    url: string;
+  };
+}
+
+const SocialBadge: React.FC<Props> = ({ social }: Props): JSX.Element => {
+  const handleClick = (): void => {
     window.open(social.url, "_blank");
   };
 
