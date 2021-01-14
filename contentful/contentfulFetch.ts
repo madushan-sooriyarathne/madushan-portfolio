@@ -6,8 +6,8 @@ const client: ContentfulClientApi = require("contentful").createClient({
   accessToken: process.env.CONTENTFUL_DELIVERY_API_KEY,
 });
 
-const fetchEntries = async (contentType: string): Promise<Entry<unknown>[]> => {
-  const entries: EntryCollection<unknown> = await client.getEntries({
+const fetchEntries = async <T>(contentType: string): Promise<Entry<T>[]> => {
+  const entries: EntryCollection<T> = await client.getEntries({
     content_type: contentType,
   });
   if (entries.items) return entries.items;
