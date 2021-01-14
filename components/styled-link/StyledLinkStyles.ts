@@ -15,7 +15,7 @@ const LinkWrapper = styled.a`
     left: 50%;
     width: 90%;
     height: 4px;
-    background-color: ${(props) => props.theme.colorGrayLight};
+    background-color: ${(props) => props.theme.colors.colorGrayLight};
     transform: translateX(-50%) rotate(-2deg);
     z-index: -1;
     transition: height 0.2s ease-in-out;
