@@ -1,8 +1,15 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+  DocumentInitialProps,
+} from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
-class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+class MyDocument extends Document<{ styleTags: any }> {
+  static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
@@ -13,7 +20,9 @@ class MyDocument extends Document {
             sheet.collectStyles(<App {...props} />),
         });
 
-      const initialProps = await Document.getInitialProps(ctx);
+      const initialProps: DocumentInitialProps = await Document.getInitialProps(
+        ctx
+      );
       return {
         ...initialProps,
         styles: (
@@ -28,7 +37,7 @@ class MyDocument extends Document {
     }
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <Html lang="en">
         <Head>
