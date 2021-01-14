@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { AppProps } from "next/app";
 import Head from "next/head";
 import { ThemeProvider } from "styled-components";
 import NotificationContextProvider from "../context/NotificationContextProvider";
@@ -11,7 +12,10 @@ import GlobalStyles, {
 
 import "../styles/fonts.css";
 
-const MainApp = ({ Component, pageProps }) => {
+const MainApp: React.FC<AppProps> = ({
+  Component,
+  pageProps,
+}: AppProps): JSX.Element => {
   useEffect(() => {
     document.fonts.ready.then(() => {
       document.body.style.visibility = "visible";
