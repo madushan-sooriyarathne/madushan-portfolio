@@ -1,4 +1,4 @@
-import { createTransport, TransportOptions } from "nodemailer";
+import { createTransport, SentMessageInfo, TransportOptions } from "nodemailer";
 
 // nodemailer configs
 const mailConfigs = {
@@ -14,7 +14,7 @@ const mailTransport = createTransport(mailConfigs as TransportOptions);
 
 const sendEmail = (
   emailDetails: EmailDetails,
-  callback: (error: Error | null, info: string) => void
+  callback: (error: Error | null, info: SentMessageInfo) => void
 ): void => {
   mailTransport.sendMail(emailDetails, callback);
 };
