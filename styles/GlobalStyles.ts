@@ -1,6 +1,10 @@
-import { createGlobalStyle } from "styled-components";
+import {
+  createGlobalStyle,
+  DefaultTheme,
+  GlobalStyleComponent,
+} from "styled-components";
 
-const GlobalStyles = createGlobalStyle`
+const GlobalStyles: GlobalStyleComponent<{}, DefaultTheme> = createGlobalStyle`
 
 
     *, *::before, *::after {
@@ -13,22 +17,22 @@ const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
         font-size: 62.5%; 
         font-weight: 400;
-        font-family: ${(props) => props.theme.fontPrimary};
+        font-family: ${(props) => props.theme.fonts.fontPrimary};
         letter-spacing: 0.5px;
         scroll-behavior: smooth;
-        color: ${(props) => props.theme.colorWhite};
+        color: ${(props) => props.theme.colors.colorWhite};
 
-        ${(props) => props.theme.responsiveLargest} {
+        ${(props) => props.theme.responsive.largest} {
           font-size: 50%;
         }
 
-        ${(props) => props.theme.responsiveSmall} {
+        ${(props) => props.theme.responsive.small} {
           font-size: 43.75%;
         }
     }
 
     body {
-        background-color: ${(props) => props.theme.colorBlack};
+        background-color: ${(props) => props.theme.colors.colorBlack};
         max-width: 100vw;
         min-height: 100vh;
     }
@@ -39,22 +43,22 @@ const GlobalStyles = createGlobalStyle`
 
     ::-webkit-scrollbar-track {
       border-radius: 10px;
-      background-color: ${(props) => props.theme.colorBlackLight};
+      background-color: ${(props) => props.theme.colors.colorBlackLight};
     }
 
     ::-webkit-scrollbar-thumb {
-      background-color: ${(props) => props.theme.colorGray};
+      background-color: ${(props) => props.theme.colors.colorGray};
       border-radius: 10px;
       transition: background-color 0.2s ease-in-out;
 
       &:hover {
-        background-color: ${(props) => props.theme.colorGrayLight};
+        background-color: ${(props) => props.theme.colors.colorGrayLight};
       }
     }
 
 `;
 
-const consoleLogStylesPrimary = `
+const consoleLogStylesPrimary: string = `
       font-size: 20px;
       font-weight: 500;
       color: #f7f7f7;
@@ -63,7 +67,7 @@ const consoleLogStylesPrimary = `
       border-radius: 5px;
     `;
 
-const consoleLogStylesSecondary = `
+const consoleLogStylesSecondary: string = `
      font-size: 15px;
       font-weight: 400;
       color: #f7f7f7;
