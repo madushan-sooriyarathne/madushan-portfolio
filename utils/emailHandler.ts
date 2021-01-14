@@ -1,4 +1,4 @@
-const mailer = require("nodemailer");
+import { createTransport, TransportOptions } from "nodemailer";
 
 // nodemailer configs
 const mailConfigs = {
@@ -10,14 +10,21 @@ const mailConfigs = {
   },
 };
 
-const mailTransport = mailer.createTransport(mailConfigs);
+const mailTransport = createTransport(mailConfigs as TransportOptions);
 
-const sendEmail = (emailDetails, callback) => {
+const sendEmail = (
+  emailDetails: EmailDetails,
+  callback: (error: Error | null, info: string) => void
+): void => {
   mailTransport.sendMail(emailDetails, callback);
 };
 
-const generateEmailDetails = (name, email, message) => {
-  const emailDetails = {
+const generateEmailDetails = (
+  name: string,
+  email: string,
+  message: string
+): EmailDetails => {
+  const emailDetails: EmailDetails = {
     from: `Mail Admin <${process.env.EMAIL_ADDRESS}>`,
     to: "madushan.sooriyarathne@outlook.com",
     subject: `New Email from ${name}`,
