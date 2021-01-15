@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
 interface ElementProps {
-  readonly skeletonHeight: string;
+  readonly skeletonHeight?: string;
 }
 
 const animation = keyframes`

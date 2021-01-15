@@ -1,7 +1,7 @@
 import { Element } from "./SkeletonStyles";
 
 interface Props {
-  height: string;
+  height?: string;
 }
 
 const Skeleton: React.FC<Props> = ({ height }: Props): JSX.Element => {
