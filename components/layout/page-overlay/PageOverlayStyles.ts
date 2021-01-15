@@ -21,7 +21,7 @@ const Overlay = styled(animated.div)`
   height: 100vh;
   opacity: 1;
   z-index: 25;
-  background-color: ${(props) => props.theme.colorBlack};
+  background-color: ${(props) => props.theme.colors.colorBlack};
 
   animation: ${animate} 0.3s forwards;
 `;
