@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { animated } from "react-spring";
 
 const Wrapper = styled.div`
   grid-column: content-start / content-end;

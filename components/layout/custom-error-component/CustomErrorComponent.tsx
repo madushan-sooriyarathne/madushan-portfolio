@@ -4,7 +4,7 @@ import Button from "../../button/Button";
 import { Wrapper, Image404 } from "./CustomErrorComponentStyles";
 import TitleGroup from "../title-group/TitleGroup";
 
-const CustomErrorComponent = () => {
+const CustomErrorComponent: React.FC = (): JSX.Element => {
   return (
     <Wrapper>
       <TitleGroup centered={true}>
