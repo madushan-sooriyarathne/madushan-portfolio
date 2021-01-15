@@ -1,6 +1,6 @@
 import { FooterWrapper, Copyright } from "./FooterStyles";
 
-const Footer = () => {
+const Footer: React.FC = (): JSX.Element => {
   return (
     <FooterWrapper>
       <Copyright>
