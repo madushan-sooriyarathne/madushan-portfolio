@@ -15,12 +15,18 @@ import {
 } from "./ExpandedWorkItemStyles";
 import { useEffect } from "react";
 
-const ExpandedWorkItem = ({ workItem }) => {
-  const handleRedirect = () => {
+interface Props {
+  workItem: DetailedWorkItem;
+}
+
+const ExpandedWorkItem: React.FC<Props> = ({
+  workItem,
+}: Props): JSX.Element => {
+  const handleRedirect = (): void => {
     window.open(workItem.url, "_blank");
   };
 
-  useEffect(() => {
+  useEffect((): void => {
     window.scroll(0, 0);
   }, []);
 

@@ -1,10 +1,14 @@
 import styled from "styled-components";
 
+interface StatusBadgeProps {
+  status: string;
+}
+
 const Wrapper = styled.div`
   grid-column: content-start / content-end;
   padding: 0 10rem;
 
-  ${(props) => props.theme.responsiveLarge} {
+  ${(props) => props.theme.responsive.large} {
     padding: 0;
   }
 `;
@@ -27,11 +31,11 @@ const DetailsWrapper = styled.div`
   gap: 2rem;
   align-items: start;
   justify-items: start;
-  background-color: ${(props) => props.theme.colorBlackLight};
+  background-color: ${(props) => props.theme.colors.colorBlackLight};
 
   padding: 5rem;
 
-  ${(props) => props.theme.responsiveLarger} {
+  ${(props) => props.theme.responsive.larger} {
     grid-template-columns: 1fr;
     grid-template-areas:
       "ti"
@@ -41,7 +45,7 @@ const DetailsWrapper = styled.div`
       "bu";
   }
 
-  ${(props) => props.theme.responsiveMedium} {
+  ${(props) => props.theme.responsive.medium} {
     padding: 2rem;
   }
 `;
@@ -57,7 +61,7 @@ const TitleWrapper = styled.div`
 const WorkType = styled.p`
   font-size: 1.4rem;
   font-weight: 600;
-  color: ${(props) => props.theme.colorGrayLight};
+  color: ${(props) => props.theme.colors.colorGrayLight};
 `;
 
 const TechStackGroup = styled.div`
@@ -70,13 +74,13 @@ const TechStackGroup = styled.div`
   justify-content: flex-end;
   flex-wrap: wrap;
 
-  ${(props) => props.theme.responsiveLarger} {
+  ${(props) => props.theme.responsive.larger} {
     justify-content: flex-start;
     justify-self: start;
   }
 `;
 
-const StatusBadge = styled.p`
+const StatusBadge = styled.p<StatusBadgeProps>`
   grid-area: ba;
   font-size: 1.5rem;
   font-weight: 600;
@@ -87,17 +91,17 @@ const StatusBadge = styled.p`
 
   color: ${(props) =>
     props.status === "in-development"
-      ? props.theme.colorWarning
+      ? props.theme.colors.colorWarning
       : props.status === "finished"
-      ? props.theme.colorSuccess
-      : props.theme.colorDanger};
+      ? props.theme.colors.colorSuccess
+      : props.theme.colors.colorDanger};
   background-color: ${(props) =>
     `rgba(${
       props.status === "in-development"
-        ? props.theme.colorWarningRGB
+        ? props.theme.colors.colorWarningRGB
         : props.status === "finished"
-        ? props.theme.colorSuccessRGB
-        : props.theme.colorDangerRGB
+        ? props.theme.colors.colorSuccessRGB
+        : props.theme.colors.colorDangerRGB
     }, 0.3)`};
 `;
 
@@ -118,7 +122,7 @@ const WorkDescription = styled.p`
     transition: border-bottom 0.2s ease;
 
     &:hover {
-      border-bottom: ${(props) => `1px solid ${props.theme.colorWhite}`};
+      border-bottom: ${(props) => `1px solid ${props.theme.colors.colorWhite}`};
     }
   }
 `;
