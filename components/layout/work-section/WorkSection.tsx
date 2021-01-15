@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+import { NextRouter, useRouter } from "next/router";
 
 import TitleGroup from "../title-group/TitleGroup";
 import HeadingPrimary from "../../headings/heading-primary/HeadingPrimary";
@@ -7,10 +7,14 @@ import HeadingSub from "../../headings/heading-sub/HeadingSub";
 import { Section, WorkGroup } from "./WorkSectionStyles";
 import WorkItem from "../../work-item/WorkItem";
 
-const WorkSection = ({ works }) => {
-  const router = useRouter();
+interface Props {
+  works: WorkItem[];
+}
 
-  const handleClick = (route) => {
+const WorkSection: React.FC<Props> = ({ works }: Props): JSX.Element => {
+  const router: NextRouter = useRouter();
+
+  const handleClick = (route: string): void => {
     router.push(`/work/${route}`);
   };
 
@@ -21,7 +25,7 @@ const WorkSection = ({ works }) => {
         <HeadingSub>Check what I've been doing lately</HeadingSub>
       </TitleGroup>
       <WorkGroup>
-        {works.map((item) => (
+        {works.map((item: WorkItem) => (
           <WorkItem workItem={item} onClick={handleClick} key={item.workId} />
         ))}
       </WorkGroup>
