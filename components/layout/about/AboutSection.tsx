@@ -19,7 +19,7 @@ import {
 } from "./AboutSectionStyles";
 import StyledLink from "../../styled-link/StyledLink";
 
-const AboutSection = () => {
+const AboutSection: React.FC = (): JSX.Element => {
   return (
     <Section>
       <TextWrapper>

@@ -12,7 +12,7 @@ const Section = styled.section`
   gap: 5rem;
   min-height: 100%;
 
-  ${(props) => props.theme.responsiveMediumHigh} {
+  ${(props) => props.theme.responsive.mediumHigh} {
     grid-template-columns: 1fr;
     grid-template-areas:
       "ab"
@@ -29,14 +29,14 @@ const TextWrapper = styled.div`
   justify-content: flex-start;
   padding: 2rem 5rem;
 
-  ${(props) => props.theme.responsiveMediumHigh} {
+  ${(props) => props.theme.responsive.mediumHigh} {
     & > * {
       text-align: center;
       align-items: center;
     }
   }
 
-  ${(props) => props.theme.responsiveSmall} {
+  ${(props) => props.theme.responsive.small} {
     padding: 0;
   }
 `;
@@ -54,7 +54,7 @@ const QuickLinksWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
 
-  ${(props) => props.theme.responsiveMediumHigh} {
+  ${(props) => props.theme.responsive.mediumHigh} {
     align-items: center;
     align-self: center;
   }
@@ -72,7 +72,7 @@ const QuickLinksGroup = styled.div`
     margin-right: 2rem;
   }
 
-  ${(props) => props.theme.responsiveMediumHigh} {
+  ${(props) => props.theme.responsive.mediumHigh} {
     justify-content: center;
   }
 `;
@@ -101,7 +101,7 @@ const QuoteWrapper = styled.div`
   justify-content: center;
   padding: 5rem;
 
-  ${(props) => props.theme.responsiveMedium} {
+  ${(props) => props.theme.responsive.medium} {
     padding: 0 0 5rem 0;
   }
 `;
@@ -132,7 +132,7 @@ const QuoteGroup = styled.div`
     margin-bottom: 2rem;
   }
 
-  ${(props) => props.theme.responsiveMediumHigh} {
+  ${(props) => props.theme.responsive.mediumHigh} {
     align-items: center;
     padding: 2rem;
   }
@@ -142,7 +142,7 @@ const Quote = styled.p`
   font-size: 5rem;
   font-weight: 700;
 
-  ${(props) => props.theme.responsiveMediumHigh} {
+  ${(props) => props.theme.responsive.mediumHigh} {
     text-align: center;
   }
 `;
