@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-const Group = styled.div`
+interface GroupProps {
+  centered: boolean;
+}
+
+const Group = styled.div<GroupProps>`
   display: flex;
   flex-direction: column;
   align-items: ${(props) => (props.centered ? "center" : "flex-start")};
@@ -11,7 +15,7 @@ const Group = styled.div`
     margin-bottom: 1rem;
   }
 
-  ${(props) => props.theme.responsiveMediumHigh} {
+  ${(props) => props.theme.responsive.mediumHigh} {
     width: ${(props) => (props.centered ? "80%" : "100%")};
   }
 `;
