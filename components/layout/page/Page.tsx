@@ -5,7 +5,11 @@ import { PageWrapper, ContentWrapper } from "./PageStyles";
 import Floater from "../../floater/Floater";
 import SnackBar from "../../snack-bar/SnackBar";
 
-const Page = ({ children }) => {
+interface Props {
+  children: React.ReactNode;
+}
+
+const Page: React.FC<Props> = ({ children }: Props): JSX.Element => {
   return (
     <PageWrapper>
       <PageOverlay />

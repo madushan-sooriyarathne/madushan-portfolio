@@ -8,7 +8,7 @@ const PageWrapper = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-auto-rows: max-content;
-  padding-top: ${(props) => `calc(${props.theme.headerHeight} + 3rem)`};
+  padding-top: ${(props) => `calc(${props.theme.sizes.headerHeight} + 3rem)`};
 `;
 
 const ContentWrapper = styled.div`
