@@ -28,12 +28,13 @@ const getStaticProps: GetStaticProps = async (): Promise<
   const stacks: TechStack[] = res.map(
     (entry: Entry<ContentfulTechStackResult>): TechStack => {
       const items: StackItem[] = entry.fields.stackItems.map(
-        (item: ContentfulStackItemResult): StackItem => ({
-          name: item.fields.name,
-          logo: item.fields.logo.fields.file.url,
-          stackItemId: item.fields.stackItemId,
+        (stackItem: Entry<ContentfulStackItemResult>) => ({
+          name: stackItem.fields.name,
+          logo: stackItem.fields.logo.fields.file.url,
+          stackItemId: stackItem.fields.stackItemId,
         })
       );
+
       return {
         stackName: entry.fields.stackName,
         stackId: entry.fields.stackId,
