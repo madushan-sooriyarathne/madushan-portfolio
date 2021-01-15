@@ -14,7 +14,7 @@ import {
 
 import { socialLinks } from "../../../data/data";
 
-const HeroBanner = () => {
+const HeroBanner: React.FC = (): JSX.Element => {
   return (
     <HeroSection>
       <TextWrapper>

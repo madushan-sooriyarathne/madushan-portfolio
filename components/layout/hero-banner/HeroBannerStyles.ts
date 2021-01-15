@@ -12,7 +12,7 @@ const HeroSection = styled.section`
 
   gap: 5rem;
 
-  ${(props) => props.theme.responsiveMedium} {
+  ${(props) => props.theme.responsive.medium} {
     grid-template-columns: minmax(min-content, 1fr);
     grid-template-areas:
       "ct"
@@ -29,11 +29,11 @@ const TextWrapper = styled.div`
   justify-content: center;
   padding-left: 20rem;
 
-  ${(props) => props.theme.responsiveLarge} {
+  ${(props) => props.theme.responsive.large} {
     padding-left: 10rem;
   }
 
-  ${(props) => props.theme.responsiveMedium} {
+  ${(props) => props.theme.responsive.medium} {
     padding-left: 0;
     padding-top: 10rem;
   }
@@ -44,7 +44,7 @@ const CTAWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
 
-  ${(props) => props.theme.responsiveMedium} {
+  ${(props) => props.theme.responsive.medium} {
     align-items: center;
   }
 
@@ -52,13 +52,13 @@ const CTAWrapper = styled.div`
     width: 80%;
   }
 
-  ${(props) => props.theme.responsiveLarger} {
+  ${(props) => props.theme.responsive.larger} {
     & > h3 {
       width: 100%;
     }
   }
 
-  ${(props) => props.theme.responsiveMedium} {
+  ${(props) => props.theme.responsive.medium} {
     & > h3 {
       text-align: center;
     }
@@ -70,10 +70,10 @@ const CTAHeading = styled.h1`
   font-weight: 900;
   color: transparent;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: ${(props) => props.theme.colorWhite};
+  -webkit-text-stroke-color: ${(props) => props.theme.colors.colorWhite};
   transition: color 0.2s ease-in-out;
 
-  ${(props) => props.theme.responsivePhone} {
+  ${(props) => props.theme.responsive.phone} {
     font-size: 7rem;
   }
 `;
@@ -89,7 +89,7 @@ const SocialMediasWrapper = styled.div`
 
 const SocialMediaHeading = styled.p`
   font-size: 4rem;
-  font-family: ${(props) => props.theme.fontSecondary};
+  font-family: ${(props) => props.theme.fonts.fontSecondary};
 `;
 
 const SocialIconGroup = styled.div`
@@ -105,7 +105,7 @@ const SocialIconGroup = styled.div`
 const SocialIcon = styled.svg`
   width: 3rem;
   height: 3rem;
-  fill: ${(props) => props.theme.colorWhite};
+  fill: ${(props) => props.theme.colors.colorWhite};
   transition: transform 0.2s ease-in-out;
 
   &:hover {
