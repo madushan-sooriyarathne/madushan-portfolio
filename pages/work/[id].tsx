@@ -26,14 +26,14 @@ const WorkPage: React.FC<Props> = ({ workItem }: Props): JSX.Element => {
 const getStaticProps: GetStaticProps = async ({
   params,
 }: GetStaticPropsContext): Promise<GetStaticPropsResult<Props>> => {
-  const pageId: string = (params as { [key: string]: string }).id;
+  const pageId: string = (params as { id: string }).id;
 
   const res: Entry<ContentfulDetailedWorkItemResult>[] = await fetchEntries<ContentfulDetailedWorkItemResult>(
     "work"
   );
 
   const workItem: ContentfulDetailedWorkItemResult = res.filter(
-    (entry: Entry<ContentfulDetailedWorkItemResult>): boolean =>
+    (entry: Entry<ContentfulDetailedWorkItemResult>) =>
       entry.fields.workId === pageId
   )[0].fields;
 
@@ -55,7 +55,7 @@ const getStaticProps: GetStaticProps = async ({
         url: workItem.url,
         stack: techStack,
         workId: workItem.workId,
-        description: workItem.description ? workItem.description : null,
+        description: workItem.description,
       },
     },
   };
@@ -71,11 +71,14 @@ const getStaticPaths: GetStaticPaths = async (): Promise<
   const res: Entry<ContentfulWorkItemResult>[] = await fetchEntries<ContentfulWorkItemResult>(
     "work"
   );
-  const paths: WorkRoute[] = res.map((entry) => ({
-    params: {
-      id: entry.fields.workId,
-    },
-  }));
+
+  const paths: WorkRoute[] = res.map(
+    (entry: Entry<ContentfulWorkItemResult>): WorkRoute => ({
+      params: {
+        id: entry.fields.workId,
+      },
+    })
+  );
 
   return {
     paths,
