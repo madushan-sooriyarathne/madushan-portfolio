@@ -10,16 +10,24 @@ import {
   StatusBadge,
 } from "./WorkItemStyles";
 
-const WorkItem = ({ workItem, onClick }) => {
-  const [loaded, setLoaded] = useState(false);
+interface Props {
+  workItem: WorkItem;
+  onClick: (workId: string) => void;
+}
 
-  const handleLoad = () => {
+const WorkItem: React.FC<Props> = ({
+  workItem,
+  onClick,
+}: Props): JSX.Element => {
+  const [loaded, setLoaded] = useState<boolean>(false);
+
+  const handleLoad = (): void => {
     setLoaded(true);
   };
 
   return (
     <ItemWrapper
-      onClick={() => {
+      onClick={(): void => {
         onClick(workItem.workId);
       }}
     >
