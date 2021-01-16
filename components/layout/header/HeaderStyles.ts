@@ -1,7 +1,19 @@
 import styled from "styled-components";
 import { animated } from "react-spring";
 
-const HeaderWrapper = styled.header`
+interface HeaderWrapperProps {
+  menuOpened: boolean;
+}
+
+interface LineProps {
+  open: boolean;
+}
+
+interface NavLinkWrapperProps {
+  selected: boolean;
+}
+
+const HeaderWrapper = styled.header<HeaderWrapperProps>`
   position: ${(props) => (props.menuOpened ? "fixed" : "absolute")};
   top: 0;
   left: 0;
@@ -15,13 +27,13 @@ const HeaderWrapper = styled.header`
   background-color: transparent;
   z-index: 20;
 
-  ${(props) => props.theme.responsiveSmall} {
+  ${(props) => props.theme.responsive.small} {
     padding: 2rem 5rem;
   }
 `;
 
 const Logo = styled.p`
-  font-family: ${(props) => props.theme.fontSecondary};
+  font-family: ${(props) => props.theme.fonts.fontSecondary};
   font-size: 5rem;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
@@ -30,7 +42,7 @@ const Logo = styled.p`
     transform: scale(1.005);
   }
 
-  ${(props) => props.theme.responsivePhone} {
+  ${(props) => props.theme.responsive.phone} {
     font-size: 4rem;
   }
 `;
@@ -47,31 +59,31 @@ const MenuButton = styled.button`
 const SVGWrapper = styled.svg`
   & > * {
     fill: none;
-    stroke: ${(props) => props.theme.colorWhite};
+    stroke: ${(props) => props.theme.colors.colorWhite};
     stroke-width: 3;
     transition: stroke-dasharray 0.5s cubic-bezier(0.4, 0, 0.2, 1),
       stroke-dashoffset 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  ${(props) => props.theme.responsiveSmall} {
+  ${(props) => props.theme.responsive.small} {
     width: 6rem;
     height: 6rem;
   }
 `;
 
-const LineOne = styled.path`
+const LineOne = styled.path<LineProps>`
   stroke-dasharray: ${(props) => (props.open ? "90 207" : "60 207")};
   stroke-dashoffset: ${(props) => props.open && -134};
   stroke-width: 3;
 `;
 
-const LineTwo = styled.path`
+const LineTwo = styled.path<LineProps>`
   stroke-dasharray: ${(props) => (props.open ? "1 60" : "60 60")};
   stroke-dashoffset: ${(props) => props.open && -30};
   stroke-width: 3;
 `;
 
-const LineThree = styled.path`
+const LineThree = styled.path<LineProps>`
   stroke-dasharray: ${(props) => (props.open ? "90 207" : "60 207")};
   stroke-dashoffset: ${(props) => props.open && -134};
   stroke-width: 3;
@@ -85,7 +97,7 @@ const NavBar = styled(animated.div)`
   bottom: 0;
   width: 100vw;
   height: 100vh;
-  background-color: ${(props) => props.theme.colorBlackLight};
+  background-color: ${(props) => props.theme.colors.colorBlackLight};
   z-index: 10;
 
   display: flex;
@@ -99,7 +111,7 @@ const NavButtonGroup = styled.div`
   align-items: center;
 `;
 
-const NavLinkWrapper = styled(animated.div)`
+const NavLinkWrapper = styled(animated.div)<NavLinkWrapperProps>`
   padding: 2rem;
   background-color: ${(props) =>
     props.selected ? "rgba(255, 255, 255, 0.1)" : "transparent"};
@@ -108,7 +120,7 @@ const NavLinkWrapper = styled(animated.div)`
 const NavBarItem = styled(animated.a)`
   font-size: 5rem;
   font-weight: 700;
-  color: ${(props) => props.theme.colorWhite};
+  color: ${(props) => props.theme.colors.colorWhite};
   opacity: 0.5;
   letter-spacing: 2px;
   cursor: pointer;
@@ -119,7 +131,7 @@ const NavBarItem = styled(animated.a)`
     opacity: 1;
   }
 
-  ${(props) => props.theme.responsiveHeightSmall} {
+  ${(props) => props.theme.responsive.heightSmall} {
     font-size: 3rem;
   }
 `;

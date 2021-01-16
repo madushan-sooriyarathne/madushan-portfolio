@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, MouseEvent } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { NextRouter, useRouter } from "next/router";
 import { useSpring, useTrail } from "react-spring";
 
 import { navBarLinks } from "../../../data/data";
@@ -18,11 +18,12 @@ import {
   NavLinkWrapper,
   NavBarItem,
 } from "./HeaderStyles";
-import { route } from "next/dist/next-server/server/router";
 
-const Header = () => {
-  const router = useRouter();
-  const [open, setOpen] = useState(false);
+const Header: React.FC = (): JSX.Element => {
+  const router: NextRouter = useRouter();
+
+  const [open, setOpen] = useState<boolean>(false);
+
   const navBarProps = useSpring({
     transform: open ? `translateX(0)` : `translateX(-100%)`,
   });
@@ -36,19 +37,19 @@ const Header = () => {
     delay: 500,
   });
 
-  const handleMenuToggle = (event) => {
+  const handleMenuToggle = (event: MouseEvent<HTMLButtonElement>): void => {
     if (open) window.scroll(0, 0);
-    setOpen((prvState) => !prvState);
+    setOpen((prvState: boolean): boolean => !prvState);
   };
 
-  const handleRouteChange = (route) => {
+  const handleRouteChange = (route: string): void => {
     setTimeout(() => {
       router.push(route);
     }, 500);
     setOpen(false);
   };
 
-  const isSelected = (route) => router.pathname === route;
+  const isSelected = (route: string): boolean => router.pathname === route;
 
   return (
     <>
@@ -76,15 +77,19 @@ const Header = () => {
         <NavButtonGroup>
           {trail.map(({ x, height, ...rest }, index) => (
             <NavLinkWrapper
-              onClick={() => handleRouteChange(navBarLinks[index].route)}
+              onClick={(): void => handleRouteChange(navBarLinks[index].route)}
               key={index}
               style={{
                 ...rest,
-                transform: x.interpolate((x) => `translate3d(0, ${x}px, 0)`),
+                // TODO - Find a better solution to interpolate issue than suppressing typescript error with //@ts-ignore
+                //@ts-ignore
+                transform: x.interpolate(
+                  (x: number) => `translate3d(0, ${x}px, 0)`
+                ),
               }}
               selected={isSelected(navBarLinks[index].route)}
             >
-              <NavBarItem styled={{ height }}>
+              <NavBarItem style={{ height }}>
                 {navBarLinks[index].name}
               </NavBarItem>
             </NavLinkWrapper>
