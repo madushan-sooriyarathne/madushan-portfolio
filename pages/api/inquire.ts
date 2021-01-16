@@ -32,6 +32,7 @@ const handler = (
             message: "Error sending email. Internal server error",
             status: "error",
           });
+          return;
         } else {
           console.log(`Email sent successfully - emailId: ${info.messageId}`);
 
@@ -40,6 +41,7 @@ const handler = (
             message: "successfully sent the message",
             status: "success",
           });
+          return;
         }
       });
     } else {
@@ -48,9 +50,11 @@ const handler = (
         message: "data cannot be accepted - missing or mis-formatted",
         status: "error",
       });
+      return;
     }
   } else {
     res.status(405).json({ message: "method not allowed", status: "error" });
+    return;
   }
 };
 
