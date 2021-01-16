@@ -1,3 +1,5 @@
+import { Asset, Entry } from "contentful";
+
 // Just to get document.fonts.ready types working. 😕
 declare global {
   const FontFace: FontFace;
@@ -14,30 +16,56 @@ declare global {
     html?: string;
   };
 
-  interface ContentfulStackItemResult {
-    fields: {
-      name: string;
-      logo: { fields: { file: { url: string } } };
-      stackItemId: string;
-    };
-  }
-
   interface StackItem {
     name: string;
     logo: string;
     stackItemId: string;
   }
 
-  interface ContentfulTechStackResult {
-    stackName: string;
-    stackId: string;
-    stackItems: ContentfulStackItemResult[];
-  }
-
   interface TechStack {
     stackName: string;
     stackId: string;
     stackItems: StackItem[];
+  }
+
+  interface WorkItem {
+    image: string;
+    name: string;
+    type: string;
+    status: string;
+    workId: string;
+  }
+
+  interface DetailedWorkItem extends WorkItem {
+    url: string;
+    stack: StackItem[];
+    description: string | null;
+  }
+
+  interface ContentfulStackItemResult {
+    name: string;
+    logo: Asset;
+    stackItemId: string;
+  }
+
+  interface ContentfulTechStackResult {
+    stackName: string;
+    stackId: string;
+    stackItems: Entry<ContentfulStackItemResult>[];
+  }
+
+  interface ContentfulWorkItemResult {
+    name: string;
+    type: string;
+    status: string;
+    workId: string;
+    image: Asset;
+  }
+
+  interface ContentfulDetailedWorkItemResult extends ContentfulWorkItemResult {
+    url: string;
+    stack: Entry<ContentfulStackItemResult>[];
+    description: string | null;
   }
 
   type CSSOMString = string;
