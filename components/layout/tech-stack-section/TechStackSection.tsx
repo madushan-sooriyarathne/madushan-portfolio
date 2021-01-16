@@ -11,7 +11,11 @@ import {
   ItemsWrapper,
 } from "./TechStackSectionStyles";
 
-const TechStackSection = ({ stacks }) => {
+interface Props {
+  stacks: TechStack[];
+}
+
+const TechStackSection: React.FC<Props> = ({ stacks }: Props): JSX.Element => {
   return (
     <Section>
       <TitleGroup centered={true}>

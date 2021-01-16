@@ -11,7 +11,7 @@ const Section = styled.section`
   padding: 3rem 10rem;
   min-height: 100%;
 
-  ${(props) => props.theme.responsiveLargest} {
+  ${(props) => props.theme.responsive.largest} {
     padding: 2rem 0;
   }
 `;
@@ -28,11 +28,11 @@ const ContentWrapper = styled.div`
 
   padding: 5rem;
 
-  ${(props) => props.theme.responsiveMedium} {
+  ${(props) => props.theme.responsive.medium} {
     grid-template-columns: 1fr;
   }
 
-  ${(props) => props.theme.responsiveSmall} {
+  ${(props) => props.theme.responsive.small} {
     padding: 0 0 5rem 0;
   }
 `;
@@ -49,7 +49,7 @@ const StackGroup = styled.div`
   padding: 3rem;
 
   border-radius: 5px;
-  background-color: ${(props) => props.theme.colorBlackLight};
+  background-color: ${(props) => props.theme.colors.colorBlackLight};
 
   transition: transform 0.3s ease-in-out;
 
@@ -74,7 +74,7 @@ const ItemsWrapper = styled.div`
   width: 100%;
   height: 100%;
 
-  ${(props) => props.theme.responsiveMedium} {
+  ${(props) => props.theme.responsive.medium} {
     justify-content: center;
   }
 `;
