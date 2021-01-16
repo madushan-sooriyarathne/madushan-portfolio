@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CustomButton, Arrow, ButtonText } from "./ButtonStyles";
 
 interface Props {
-  onClick: (event: MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
   type?: "button" | "submit" | "reset";
   disabled?: boolean;
   isBig?: boolean;
@@ -12,8 +12,8 @@ interface Props {
 }
 
 const Button: React.FC<Props> = ({
-  onClick,
   children,
+  onClick,
   type = "button",
   disabled = false,
   isBig = false,
