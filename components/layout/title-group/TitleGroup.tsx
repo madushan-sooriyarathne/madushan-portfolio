@@ -2,7 +2,7 @@ import { Group } from "./TitleGroupStyles";
 
 interface Props {
   children: React.ReactNode;
-  centered: boolean;
+  centered?: boolean;
 }
 
 const TitleGroup: React.FC<Props> = ({
