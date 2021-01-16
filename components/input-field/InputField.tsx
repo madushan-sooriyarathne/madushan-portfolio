@@ -7,7 +7,7 @@ interface Props {
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => void;
   value: string;
-  type: string;
+  type?: string;
   pattern?: string;
   textarea?: boolean;
   required?: boolean;
