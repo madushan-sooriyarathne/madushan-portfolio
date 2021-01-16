@@ -13,7 +13,7 @@ const Section = styled.div`
   align-items: center;
   justify-items: start;
 
-  ${(props) => props.theme.responsiveMedium} {
+  ${(props) => props.theme.responsive.medium} {
     grid-template-columns: 1fr;
     grid-template-areas:
       "in"
@@ -41,12 +41,12 @@ const Form = styled.form`
     margin-bottom: 5rem;
   }
 
-  ${(props) => props.theme.responsiveSmall} {
+  ${(props) => props.theme.responsive.small} {
     padding: 5rem 0;
   }
 
   & > *:first-child {
-    ${(props) => props.theme.responsivePhone} {
+    ${(props) => props.theme.responsive.phone} {
       align-items: center;
       text-align: center;
     }
@@ -67,7 +67,7 @@ const ContactDetails = styled.div`
   justify-items: center;
   align-content: center;
 
-  ${(props) => props.theme.responsiveMedium} {
+  ${(props) => props.theme.responsive.medium} {
     padding: 0 0 5rem 0;
   }
 `;
@@ -83,11 +83,11 @@ const SocialLinkGroup = styled.div`
     margin-bottom: 2rem;
   }
 
-  ${(props) => props.theme.responsiveLarger} {
+  ${(props) => props.theme.responsive.larger} {
     width: 70%;
   }
 
-  ${(props) => props.theme.responsivePhone} {
+  ${(props) => props.theme.responsive.phone} {
     width: 100%;
   }
 `;

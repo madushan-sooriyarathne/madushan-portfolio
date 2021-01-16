@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { FormEvent, useContext } from "react";
 import { NotificationDispatchContext } from "../../../context/NotificationContextProvider";
 import useInputState from "../../../hooks/useInputState";
 
@@ -20,20 +20,20 @@ import {
   ContactDetailsGroup,
 } from "./ContactSectionStyles";
 
-const ContactSection = () => {
+const ContactSection: React.FC = (): JSX.Element => {
   // state
   const [name, updateName, resetName] = useInputState("");
   const [email, updateEmail, resetEmail] = useInputState("");
   const [message, updateMessage, resetMessage] = useInputState("");
 
   // context
-  const setNotification = useContext(NotificationDispatchContext);
+  const setNotification = useContext(NotificationDispatchContext); // TODO Fix the types of NotificationDispatchContext
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     // Submit to API and that magic
-    const res = await fetch("/api/inquire", {
+    const res: Response = await fetch("/api/inquire", {
       method: "POST",
       credentials: "same-origin",
       mode: "cors",
@@ -71,7 +71,13 @@ const ContactSection = () => {
             back to as soon as possible.
           </HeadingSub>
         </TitleGroup>
-        <InputField name="Name" onChange={updateName} value={name} required />
+        <InputField
+          name="Name"
+          type="text"
+          onChange={updateName}
+          value={name}
+          required
+        />
         <InputField
           name="Email"
           type="email"
@@ -82,6 +88,7 @@ const ContactSection = () => {
         />
         <InputField
           name="Message"
+          type="text"
           onChange={updateMessage}
           value={message}
           textarea
