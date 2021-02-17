@@ -103,7 +103,7 @@ const ContactSection: React.FC = (): JSX.Element => {
         </SocialLinkGroup>
         <ContactDetailsGroup>
           <HeadingSecondary>+94 71 688 0657</HeadingSecondary>
-          <HeadingSub>madushan.sooriyarathne@outlook.com</HeadingSub>
+          <HeadingSub>hello@madushan.dev</HeadingSub>
         </ContactDetailsGroup>
       </ContactDetails>
     </Section>
